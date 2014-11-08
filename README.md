@@ -1,0 +1,28 @@
+Writing your Papers and Thesis using LaTeX
+===========================================
+> A short course on LaTeX for Beginners on writing papers and thesis in LaTeX. 
+
+## Authors
+Krishna Kumar, University of Cambridge. 
+
+----------------------------------------------------------------------------------
+## Course content
+
+Course has hands-on exercises to help you write and format your papers and thesis.
+
+###  First day: Writing a paper with LaTeX
+
+*    Why LaTeX
+*    Document structure
+*    Simple equations
+*    Using simple figures
+*    Simple Tables
+*    Formatting a paper using a journal's template (IEEE / others depending on the participants).
+
+##   Second day: Writing your thesis using LaTeX
+
+*    More equations, align environment
+*    Style guide and good practices
+*    Better tables and figures
+*    Referencing and Bibliography
+*    Formatting your thesis using the PhD Thesis Template

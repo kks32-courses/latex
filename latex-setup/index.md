@@ -84,7 +84,7 @@ sudo zypper install texlive
 
 ### Debian/Ubuntu:
 
-``` {style="shell"}
+```
 sudo apt-get install texlive texlive-latex-extra 
 sudo apt-get install psutils
 ```
@@ -104,17 +104,16 @@ sudo apt-get install psutils
 ### Installation
 
 1.  Mount the ISO file in the mnt directory
-
-    ``` {style="shell"}
-        mount -t iso9660 -o ro,loop,noauto /your/texlive2014.iso /mnt
-        
+    
     ```
+    mount -t iso9660 -o ro,loop,noauto /your/texlive2014.iso /mnt
+    ``` 
 
 2.  Get wget on your OS (use rpm, apt-get or yum install)
 
 3.  Run the installer script install-tl.
 
-    ``` {style="shell"}
+    ```
     cd /your/download/directory
     ./install-tl
     ```

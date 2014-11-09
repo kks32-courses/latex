@@ -28,6 +28,6 @@ Penn State University has examples of good and bad practice here: [http://access
 And if you need a web-based tool to change the colours of your graphs to make them more accessible, you could try Daltonize: [http://www.vischeck.com/daltonize/](http://www.vischeck.com/daltonize/)
 
 <figure>
-	<a href="colourblindness_rainbow.png"><img src="colourblindness_rainbow.png" alt="image"></a>
+	<a href="colourblindness_rainbow.png"><img src="https://raw.githubusercontent.com/kks32/latex-paper-thesis/gh-pages/images/colourblindness_rainbow.png" alt="colour-blindness-image"></a>
 	<figcaption>Colour-blindness: how different people perceive colours.</figcaption>
 </figure>

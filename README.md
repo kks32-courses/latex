@@ -6,6 +6,9 @@ Writing your Papers and Thesis using LaTeX
 Krishna Kumar, 
 University of Cambridge. 
 
+[![Build Status](https://travis-ci.org/kks32/jekyll.svg)](https://travis-ci.org/kks32/jekyll)
+
+[![License MIT](http://img.shields.io/badge/license-cc40-brightgreen.svg)]([License][])
 ----------------------------------------------------------------------------------
 ## Course content
 
@@ -30,5 +33,6 @@ Course has hands-on exercises to help you write and format your papers and thesi
 
 ## License
 This work is licensed under the Creative Commons Attribution 4.0 International License. To view a copy of this license, visit [http://creativecommons.org/licenses/by/4.0/](http://creativecommons.org/licenses/by/4.0/).
+
 
 +[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/kks32/latex/trend.png)](https://bitdeli.com/free "Bitdeli Badge")

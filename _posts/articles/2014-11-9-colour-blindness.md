@@ -26,3 +26,8 @@ The BBC recommend several tools to help you, for example this colour contrast ch
 Penn State University has examples of good and bad practice here: [http://accessibility.psu.edu/charts](http://accessibility.psu.edu/charts)
 
 And if you need a web-based tool to change the colours of your graphs to make them more accessible, you could try Daltonize: [http://www.vischeck.com/daltonize/](http://www.vischeck.com/daltonize/)
+
+<figure>
+	<a href="colourblindness_rainbow.png"><img src="colourblindness_rainbow.png" alt="image"></a>
+	<figcaption>Colour-blindness: how different people perceive colours.</figcaption>
+</figure>

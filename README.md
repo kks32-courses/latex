@@ -2,13 +2,11 @@ Writing your Papers and Thesis using LaTeX
 ===========================================
 > A short course on LaTeX for Beginners on writing papers and thesis in LaTeX. 
 
+[![Build Status](https://travis-ci.org/kks32/jekyll.svg)](https://travis-ci.org/kks32/jekyll)
+
 ## Authors
 Krishna Kumar, 
 University of Cambridge. 
-
-[![Build Status](https://travis-ci.org/kks32/jekyll.svg)](https://travis-ci.org/kks32/jekyll)
-
-[![License MIT](http://img.shields.io/badge/license-cc40-brightgreen.svg)]([License][])
 ----------------------------------------------------------------------------------
 ## Course content
 

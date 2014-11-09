@@ -12,7 +12,7 @@ before_install:
 script:
   - set -e
   - bundle exec jekyll build --drafts
-  - bundle exec htmlproof ./_site
+#  - bundle exec htmlproof ./_site
 
 notifications:
   email: true

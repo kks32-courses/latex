@@ -36,3 +36,16 @@ thesis.run.xml*
 *run.xml*
 *.latexmkrc*
 *_latexmk*
+_site
+*.DS_Store*
+*.sublime-project
+*.sublime-workspace
+codekit-config.json
+node_modules
+Gemfile.lock
+.sass-cache
+_data
+_posts
+_layouts
+_site
+_includes

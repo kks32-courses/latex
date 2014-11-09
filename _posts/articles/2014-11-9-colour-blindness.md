@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Creating colour-blind friendly plots"
+title: "Making graphs with colour-blind viewers in mind"
 excerpt: ""
 categories: articles
 tags: [colour-blindness, figures]
@@ -8,8 +8,6 @@ author: charlotte_houldcroft
 comments: false
 share: false
 ---
-
-#Making graphs with colour-blind viewers in mind
 
 Appropriate use of colour makes graphs clearer and more informative for the viewer. However, a significant proportion of the population experience some degree of colour-blindness - an inability to perceive or distinguish between certain colours. The most common kind is red-green colour blindness, affecting up to 10% of men, and a smaller proportion of women. 
 

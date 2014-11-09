@@ -223,19 +223,19 @@ span + .entry-title {
 .entry-title {
 	font-family: $alt-font;
 	font-style: italic;
-	@include font-size(36,yes,36);
-	font-weight: 400;
+	@include font-size(16,yes,16);
+	font-weight: 200;
 	line-height: 1;
-	letter-spacing: -3px;
+	letter-spacing: 0px;
 	a {
 		color: $black;
 		text-decoration: underline;
 	}
 	@include media($medium) {
-		@include font-size(52,yes,54);
+		@include font-size(24,yes,24);
 	}
 	@include media($large) {
-		@include font-size(68,yes,72);
+		@include font-size(36,yes,36);
 	}
 }
 .entry-wrapper {
@@ -311,7 +311,7 @@ span + .entry-title {
 #home,
 #page {
 	.entry-wrapper {
-		max-width: em(760);
+		max-width: em(780);
 	}
 	.entry-title {
 		text-align: center;

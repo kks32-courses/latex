@@ -4,7 +4,6 @@ rvm:
 
 branches:
   only:
-    - master
     - gh-pages
 
 before_install:

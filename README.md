@@ -1,30 +1,32 @@
-# So Simple Theme
+Writing your Papers and Thesis using LaTeX
+===========================================
+> A short course on LaTeX for Beginners on writing papers and thesis in LaTeX. 
 
-Looking for a simple, responsive, theme for your Jekyll powered blog? Well look no further. Here be **So Simple Theme**, the followup to [**Minimal Mistakes**](http://mmistakes.github.io/minimal-mistakes/) -- by designer slash illustrator [Michael Rose](http://mademistakes.com).
+## Authors
+Krishna Kumar, 
+University of Cambridge. 
 
-[![Build Status](https://travis-ci.org/mmistakes/so-simple-theme.svg?branch=master)](https://travis-ci.org/mmistakes/so-simple-theme)
+----------------------------------------------------------------------------------
+## Course content
 
-## So Simple Theme is all about:
+Course has hands-on exercises to help you write and format your papers and thesis.
 
-* Responsive templates. Looking good on mobile, tablet, and desktop.
-* Gracefully degrading in older browsers. Compatible with Internet Explorer 9+ and all modern browsers.
-* Minimal embellishments and subtle animations.
-* Optional large feature images for posts and pages.
-* [Custom 404 page](http://mmistakes.github.io/so-simple-theme/404.html) to get you started.
-* [Simple site search](https://github.com/christian-fei/Simple-Jekyll-Search)
-* Support for Disqus Comments
+###  First day: Writing a paper with LaTeX
 
-![screenshot of So Simple Theme](http://mmistakes.github.io/so-simple-theme/images/so-simple-theme-preview.jpg)
+*    Why LaTeX
+*    Document structure
+*    Simple equations
+*    Using simple figures
+*    Simple Tables
+*    Formatting a paper using a journal's template (IEEE / others depending on the participants).
 
-See a [live version of So Simple](http://mmistakes.github.io/so-simple-theme/) hosted on GitHub.
+###   Second day: Writing your thesis using LaTeX
 
----
+*    More equations, align environment
+*    Style guide and good practices
+*    Better tables and figures
+*    Referencing and Bibliography
+*    Formatting your thesis using the CUED PhD Thesis Template
 
-## Getting Started
-
-So Simple takes advantage of Sass and data files to make customizing easier. These features require Jekyll 2.x and will not work with older versions of Jekyll.
-
-To learn how to install and use this theme check out the [Setup Guide](http://mmistakes.github.io/so-simple-theme/theme-setup/) for more information.
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/mmistakes/so-simple-theme/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
+## License
+This work is licensed under the Creative Commons Attribution 4.0 International License. To view a copy of this license, visit [http://creativecommons.org/licenses/by/4.0/](http://creativecommons.org/licenses/by/4.0/).

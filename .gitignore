@@ -20,6 +20,8 @@
 *make
 *.d
 *.btmp*
+*.nav*
+*.snm*
 *.fls*
 *.glo*
 *.idx*

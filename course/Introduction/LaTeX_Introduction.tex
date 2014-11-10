@@ -6,12 +6,14 @@
 \begin{frame}
   \titlepage
 \end{frame}
-
+%*******************************************************************************
 %**************************** Introduction *************************************
+%*******************************************************************************
 \section{Introduction to \LaTeX2e}
 
-
+%*******************************************************************************
 %******************************* Frame *****************************************
+%*******************************************************************************
 \begin{frame}{What is \LaTeX?}
 \begin{itemize}
 \item \LaTeX is a document preparation system for the \TeX typesetting 
@@ -34,15 +36,18 @@ E^2 = (pc)^2 + (m_0 c^2)^2
 \end{itemize}
 \end{frame}
 
-
+%*******************************************************************************
 %******************************* Frame *****************************************
+%*******************************************************************************
 \begin{frame}{Can you see beyond the WYSIWYG bubble?}
 \begin{figure}
 \includegraphics[height=0.85\textheight]{figs/LaTeX_Word.png}
 \end{figure}
 \end{frame}
 
+%*******************************************************************************
 %******************************* Frame *****************************************
+%*******************************************************************************
 \begin{frame}{Ligatures}
 \begin{figure}
 \centering
@@ -58,28 +63,39 @@ E^2 = (pc)^2 + (m_0 c^2)^2
 D.Taraborelli (2008), The Beauty of \LaTeX
 \end{frame}
 
+%*******************************************************************************
 %******************************* Frame *****************************************
+%*******************************************************************************
 \begin{frame}
 \frametitle{Developers}
 \begin{itemize}
 \item
-\parbox{0.25\textwidth}{\includegraphics[width=0.15\textwidth]{figs/Donald_Knuth.png}}\hspace{0cm}
+\parbox{0.25\textwidth}{
+	\includegraphics[width=0.15\textwidth]{figs/Donald_Knuth.png}}
 \parbox{0.65\textwidth}{Donald Knuth, 1977, \TeX ~Version 3.141592}
 \item
-\parbox{0.25\textwidth}{\includegraphics[width=0.15\textwidth]{figs/Hermann.jpg}}\hspace{0cm}
+\parbox{0.25\textwidth}{
+	\includegraphics[width=0.15\textwidth]{figs/Hermann.jpg}}
 \parbox{0.65\textwidth}{Hermann Zapf}
 \item
-\parbox{0.25\textwidth}{\includegraphics[width=0.15\textwidth]{figs/Leslie.png}}\hspace{0cm}
+\parbox{0.25\textwidth}{\includegraphics[width=0.15\textwidth]{figs/Leslie.png}}
 \parbox{0.65\textwidth}{Leslie Lamport, \LaTeX2e}
 \end{itemize}
 \end{frame}
 
-
+%*******************************************************************************
 %******************************* Frame *****************************************
+%*******************************************************************************
 \begin{frame}{How \LaTeX works? - The Magic}
+\begin{itemize}
+\item You write your document in \texttt{plain text} with \cmd{commands} that
+describe its structure and meaning.
+\item The \LaTeX program processes your text and commands to produce a
+beautifully formatted document.
+\end{itemize}
 
 \centering
-\includegraphics[width=0.7\textwidth]{figs/magic.png}
+\includegraphics[width=0.95\textwidth]{figs/magic.png}
 \end{frame}
 
 

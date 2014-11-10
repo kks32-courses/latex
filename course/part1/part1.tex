@@ -125,7 +125,7 @@ click here to see my solution}}.
 %*******************************************************************************
 %******************************* Frame *****************************************
 %*******************************************************************************
-\begin{frame}[fragile]{Exercise 4: Sections}
+\begin{frame}[fragile]{Typesetting Maths}
 \begin{itemize}
 \item Why are dollar signs \keys{\$} special? We use them to mark mathematics 
 in text.\\[1ex]
@@ -148,6 +148,84 @@ Let $y = m x + b$ be \ldots
 \end{exampletwouptiny}
 
 \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Notation}
+\begin{itemize}
+\item Use caret \verb|^| for superscripts and underscore \cmmd{`\_'} 
+for subscripts.
+\begin{exampletwouptiny}
+$y = c_2 x^2 + c_1 x + c_0$
+\end{exampletwouptiny}
+\vskip 2ex
+
+\item Use curly braces $\{$ and $\}$ to group
+superscripts and subscripts.
+\begin{exampletwouptiny}
+$F_n = F_n-1 + F_n-2$     % oops!
+
+$F_n = F_{n-1} + F_{n-2}$ % ok!
+\end{exampletwouptiny}
+\vskip 2ex
+
+\item There are commands for Greek letters and common notation.
+\begin{exampletwouptiny}
+$\mu = A e^{Q/RT}$
+
+$\Omega = \sum_{k=1}^{n} \omega_k$
+\end{exampletwouptiny}
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{\insertsubsection{}: Displayed Equations}
+\begin{itemize}
+\item If it's big and scary, \emph{display} it on its own line using
+\cmdbegin{equation} and \cmdend{equation}.\\[2ex]
+\begin{exampletwouptiny}
+The roots of a quadratic equation
+are given by
+\begin{equation}
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}
+         {2a}
+\end{equation}
+where $a$, $b$ and $c$ are \ldots
+\end{exampletwouptiny}
+\vskip 1em
+{\scriptsize Caution: \LaTeX{} mostly ignores your spaces in mathematics, but it
+can't handle blank lines in equations --- don't put blank lines in your
+mathematics.}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Ex 5: Maths}
+\begin{equation*}
+i \hbar \frac{\partial}{\partial t} \Psi(r,t) = 
+\left[\frac{-\hbar^2}{2\mu}\nabla^2+V(r,t)\right]\Psi(r,t)
+\end{equation*}
+
+\begin{equation*}
+E^2 = (pc)^2 + (m_0 c^2)^2
+\end{equation*}
+
+
+\begin{center}
+\fbox{\href{\wlnewdoc{Ex5-Math/Ex5-Math.tex}}{%
+Click to open this exercise in \wllogo{}}}
+\end{center}
+\begin{itemize}
+\item Format these two equations:
+\item To format math you need to use additional packages 
+\item Add packages
+\item Use detexify to find out what the symbols are 
+\href{http://detexify.kirelabs.org/classify.html}{http://detexify.kirelabs.org/classify.html}
+\fbox{\href{\wlnewdoc{Ex5-Math/Ex5-Math-solution.tex}}{%
+click here to see my solution}}.
+\end{itemize}
+
 \end{frame}
 
 \end{document}

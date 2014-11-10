@@ -98,6 +98,33 @@ beautifully formatted document.
 \includegraphics[width=0.95\textwidth]{figs/magic.png}
 \end{frame}
 
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
+
+\begin{frame}{\LaTeX Pros and Cons}
+\textbf{Pros}
+\begin{itemize}
+\item    It's free and works on Macs, Windows, Unix/Linux.
+\item    LaTeX files are ASCII and are portable.
+\item    The typesetting is better, especially the maths.
+\item    Style changes are neater in LaTeX. 
+\end{itemize}
+\textbf{Cons}
+\begin{itemize}
+\item    Special/Modern Font selection is difficult, but one can use XeTeX.
+\item    LaTeX encourages (almost insists on) structured writing and the 
+separation of style from content. This is not the way that many people 
+(especially non-programmers) are used to working.
+\item    Without a WYSIWYG front end, it's not always easy to find out how to 
+do things.
+\end{itemize}
+\end{frame}
+
+
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
 
 \begin{frame}[fragile]{More examples of commands and their output\ldots}
 \begin{exampletwoup}
@@ -121,34 +148,24 @@ beautifully formatted document.
 \end{exampletwoup}
 \end{frame}
 
+\begin{frame}[fragile]{Getting Started}
+\begin{itemize}
+\item A minimal \LaTeX{} document:
+\inputminted[frame=single]{latex}{Hello.tex}
+\item Commands start with a \emph{backslash} \keys{$\backslash$}
+\item Every document starts with a \cmdbs{documentclass} command.
+\item The \emph{argument} in curly braces \keys{\{} \keys{\}} 
+tells \LaTeX what kind of document we are creating: an \bftt{article}.
+\item A percent sign \keys{\%} starts a \emph{comment} --- \LaTeX
+will ignore the rest of the line.
 
-%******************************* Frame *****************************************
-\begin{frame}{\LaTeX Pros and Cons}
-\textbf{Pros}
-\begin{itemize}
-\item    It's free and works on Macs, Windows, Unix/Linux.
-\item    LaTeX files are ASCII and are portable.
-\item    The typesetting is better, especially the maths.
-\item    Style changes are neater in LaTeX. 
-\end{itemize}
-\textbf{Cons}
-\begin{itemize}
-\item    Special/Modern Font selection is difficult, but one can use XeTeX.
-\item    LaTeX encourages (almost insists on) structured writing and the 
-separation of style from content. This is not the way that many people 
-(especially non-programmers) are used to working.
-\item    Without a WYSIWYG front end, it's not always easy to find out how to 
-do things.
 \end{itemize}
 \end{frame}
-
-
 
 %******************************* Frame *****************************************
 \section{Structure}
 
 %******************************* Frame *****************************************
-
 \begin{frame}{LaTeX Structure}
 \begin{figure}
 \centering

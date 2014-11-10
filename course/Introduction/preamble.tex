@@ -9,17 +9,20 @@
 \usepackage{multicol}
 \usepackage{tabularx}
 \usepackage{booktabs}
+\usepackage{menukeys}
 
-
+% Stolen from John Miller's LaTeX course
 \newcommand{\bftt}[1]{\textbf{\texttt{#1}}}
 \newcommand{\comment}[1]{{\color[HTML]{008080}\textit{\textbf{\texttt{#1}}}}}
-\newcommand{\cmd}[1]{{\color[HTML]{008000}\bftt{#1}}}
-\newcommand{\bs}{\char`\\}
-\newcommand{\cmdbs}[1]{\cmd{\bs#1}}
+\newcommand{\cmmd}[1]{{\color[HTML]{008000}\bftt{#1}}}
+\newcommand{\bs}{$\backslash$}
+\newcommand{\cmdbs}[1]{\cmmd{\bs#1}}
 \newcommand{\lcb}{\char '173}
 \newcommand{\rcb}{\char '175}
 \newcommand{\cmdbegin}[1]{\cmdbs{begin\lcb}\bftt{#1}\cmd{\rcb}}
 \newcommand{\cmdend}[1]{\cmdbs{end\lcb}\bftt{#1}\cmd{\rcb}}
+
+
 
 %\newcommand{\wllogo}{\textbf{write\textrm{\LaTeX}}}
 
@@ -31,23 +34,6 @@
 
 \def\tikzname{Ti\emph{k}Z}
 
-% from http://tex.stackexchange.com/questions/5226/keyboard-font-for-latex
-\newcommand*\keystroke[1]{%
-  \tikz[baseline=(key.base)]
-    \node[%
-      draw,
-      fill=white,
-      drop shadow={shadow xshift=0.25ex,shadow 
-      yshift=-0.25ex,fill=black,opacity=0.75},
-      rectangle,
-      rounded corners=2pt,
-      inner sep=1pt,
-      line width=0.5pt,
-      font=\scriptsize\sffamily
-    ](key) {#1\strut}
-  ;
-}
-\newcommand{\keystrokebftt}[1]{\keystroke{\bftt{#1}}}
 
 % stolen from minted.dtx
 \newenvironment{exampletwoup}

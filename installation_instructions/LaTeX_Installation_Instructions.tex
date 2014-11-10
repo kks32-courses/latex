@@ -1,0 +1,201 @@
+\documentclass[times,twoside,11pt]{article}
+
+\usepackage[pdftex,paper=a4paper,hmarginratio=1:1,          
+vmarginratio=1:1]{geometry}
+
+% ************************ URL Package and Definition **************************
+\RequirePackage{url}
+\renewcommand{\UrlFont}{\normalsize}
+\urlstyle{leo}
+
+
+% For PDF Online version
+\usepackage[pdftex, breaklinks=true, linktocpage,
+  colorlinks=true, linkcolor=blue, urlcolor=blue, 
+  citecolor=blue, anchorcolor=green]{hyperref}
+
+% ************************** To copy ligatures ******************************* %
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\input{glyphtounicode}
+\pdfglyphtounicode{f_f}{FB00}
+\pdfglyphtounicode{f_i}{FB01}
+\pdfglyphtounicode{f_l}{FB02}
+\pdfglyphtounicode{f_f_i}{FB03}
+\pdfglyphtounicode{f_f_l}{FB04}
+\pdfgentounicode=1
+
+
+% ********************************** Listings **********************************
+\usepackage{listings}
+\usepackage{color}
+\usepackage{xcolor}
+
+\definecolor{light-gray}{gray}{0.95}
+\lstdefinestyle{shell}{
+  backgroundcolor=\color{light-gray},
+  belowcaptionskip=1\baselineskip,
+  breaklines=true,
+  xleftmargin=\parindent,
+  language=sh,
+  showstringspaces=false,
+  keywordstyle=\bfseries\color{black},
+  commentstyle=\itshape\color{black},
+  identifierstyle=\color{black},
+  stringstyle=\color{black},
+  morekeywords={sudo, apt-get, yum, zypper, mount},
+  columns=flexible,texcl,
+  mathescape=true,
+}
+
+
+% **************************** Title and Info ******************************** %
+
+\title{\LaTeXe  Installation Instructions}
+\author{Krishna Kumar\thanks{kks32@cam.ac.uk}}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{Windows OS}
+\subsection*{\TeX distribtion}
+\subsubsection*{\TeX Live (Recommended)}
+\begin{enumerate}
+\item	Download the \TeX Live ISO ($\sim 2.5$~GB) from 
+\url{http://anorien.csc.warwick.ac.uk/mirrors/CTAN/systems/texlive/Images/texlive2014.iso}
+\item	Download WinCDEmu (if you don't have a virtual drive) from 
+\url{http://wincdemu.sysprogs.org/download/WinCDEmu-3.6.exe}
+\item	To install Windows CD Emulator follow the instructions at 
+\url{http://wincdemu.sysprogs.org/tutorials/install/}
+\item	Right click the iso and mount it using the WinCDEmu as shown in 
+\url{http://wincdemu.sysprogs.org/tutorials/mount/}
+\item	Open your virtual drive and run \verb|setup.pl|
+\end{enumerate}
+
+\subsubsection*{Mik\TeX}
+\begin{enumerate}
+\item	Download Basic-MikTex 2.9 (32bit or 64bit) from 
+\url{http://miktex.org/download}
+\item	Run the installer 
+\url{http://docs.miktex.org/2.9/manual/ch02s02.html}
+\item	To add a new package go to Start >> All Programs >> MikTex 2.9 >> 
+Maintenance (Admin) and choose Package Manager
+\item	Select or search for packages to install
+\end{enumerate}
+
+
+\subsection*{TexStudio (\TeX Editor)}
+\begin{enumerate}
+\item	Download TexStudio 2.8 from 
+\url{http://texstudio.sourceforge.net/\#downloads} 
+\item	Run the installer
+\end{enumerate}
+
+\section*{Mac OS X}
+\subsection*{MacTex (Install \TeX Live 2014)}
+\begin{enumerate}
+\item	
+	Download the file from 
+	\url{http://mirror.ctan.org/systems/mac/mactex/MacTeX.pkg}
+\item	
+	Extract and double click to run the installer. It does the entire 
+	configuration, sit back and relax.
+\end{enumerate}
+
+\subsection*{TexStudio (\TeX Editor)}
+\begin{enumerate}
+\item	
+	Download \TeX Studio 2.8 from 
+	\url{http://texstudio.sourceforge.net/\#downloads}
+ 
+\item
+	Extract and Start
+\end{enumerate}
+
+
+\section*{Unix/Linux:}
+
+\subsection*{Installation using Linux packages} 
+\subsubsection*{Fedora/RedHat/CentOS:}
+\begin{lstlisting}[style=shell]
+sudo yum install texlive 
+sudo yum install psutils 
+\end{lstlisting}
+
+
+\subsubsection*{SUSE:}
+\begin{lstlisting}[style=shell]
+sudo zypper install texlive
+\end{lstlisting}
+
+
+\subsubsection*{Debian/Ubuntu:}
+\begin{lstlisting}[style=shell] 
+sudo apt-get install texlive texlive-latex-extra 
+sudo apt-get install psutils
+\end{lstlisting}
+
+\subsection*{Direct installation (latest version)}
+\subsubsection*{Getting the distribution}
+\begin{enumerate}
+\item	
+	\TeX Live can be downloaded from 
+	\url{https://www.tug.org/texlive/acquire.html}. You might require 
+	wget to download through proxies.
+
+\item
+	\TeX Live is provided by most operating system you can use (rpm, 
+	apt-get or yum) to get \TeX Live distributions (note: usually it's the old 
+	\TeX Live) 
+\end{enumerate}
+
+\subsubsection*{Installation}
+\begin{enumerate}
+\item	
+	Mount the ISO file in the mnt directory
+	\begin{lstlisting}[style=shell]
+	mount -t iso9660 -o ro,loop,noauto /your/texlive2014.iso /mnt
+	\end{lstlisting}
+
+\item
+	Get wget on your OS (use rpm, apt-get or yum install)
+\item
+	Run the installer script install-tl.
+
+\begin{lstlisting}[style=shell]
+cd /your/download/directory
+./install-tl
+\end{lstlisting}
+
+\item
+	Enter command `i' for installation
+
+\item
+	Post-Installation configuration (Environment variables for Unix): 
+	\url{http://www.tug.org/texlive/doc/texlive-en/texlive-en.html\#x1-320003.4.1}
+\item	
+	Set the path for the directory of \TeX Live binaries in your 
+	\verb|~/.bashrc| 
+	file:
+
+\paragraph{64Bit}
+
+\begin{verbatim}
+PATH=/usr/local/texlive/2014/bin/x86_64-linux:$PATH; export PATH
+MANPATH=/usr/local/texlive/2014/texmf/doc/man:$MANPATH; export MANPATH 
+INFOPATH=/usr/local/texlive/2014/texmf/doc/info:$INFOPATH; export INFOPATH
+\end{verbatim}
+
+\paragraph{32Bit}
+
+\begin{verbatim}
+PATH=/usr/local/texlive/2014/bin/i386-linux:$PATH; export PATH 
+MANPATH=/usr/local/texlive/2014/texmf/doc/man:$MANPATH; export MANPATH 
+INFOPATH=/usr/local/texlive/2014/texmf/doc/info:$INFOPATH; export INFOPATH
+\end{verbatim}
+
+\end{enumerate}
+
+\end{document}

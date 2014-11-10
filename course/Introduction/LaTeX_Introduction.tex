@@ -99,6 +99,28 @@ beautifully formatted document.
 \end{frame}
 
 
+\begin{frame}[fragile]{More examples of commands and their output\ldots}
+\begin{exampletwoup}
+\begin{itemize}
+\item Despicable Me
+\item Wall-E
+\item Tangled
+\end{itemize}
+\end{exampletwoup}
+\vskip 2ex
+\begin{exampletwoup}
+\begin{figure}
+\includegraphics{figs/minion}
+\end{figure}
+\end{exampletwoup}
+\vskip 2ex
+\begin{exampletwoup}
+\begin{equation}
+\alpha = \beta + 1
+\end{equation}
+\end{exampletwoup}
+\end{frame}
+
 
 %******************************* Frame *****************************************
 \begin{frame}{\LaTeX Pros and Cons}
@@ -157,56 +179,6 @@ beamer& For writing presentations \\ \hline
 
 
 %**********************************************FRAME***************************************
-\begin{frame}{Article, Report and Book}
-\begin{table}
-\begin{tabular}{|l|c|l|c|}
-\hline
-\multicolumn{2}{c}{\textbf{Article}}  & \multicolumn{2}{c}{\textbf{report}} \\ 
-\hline
-\textbf{section} &\textbf{ numbering} & \textbf{section} & \textbf{numbering} \\ \hline
-$\backslash$part & 0 & $\backslash$part & -1 \\ \hline
-$\backslash$chapter & 0 & $\backslash$section & 1 \\ \hline
-$\backslash$section & 1 & $\backslash$subsection & 2 \\ \hline
-$\backslash$subsection & 2 & $\backslash$subsubsection & 3 \\ \hline
-$\backslash$subsubsection & 3 & $\backslash$paragraph & 4 \\ \hline
-$\backslash$paragraph & 4 & $\backslash$subparagraph & 5 \\ \hline
-$\backslash$subparagraph & 5 & & \\ \hline
-
-\end{tabular}
-\end{table}
-\end{frame}
-
-%**********************************************FRAME***************************************
-\begin{frame}{$\backslash$documentclass$[$\textbf{options}$]$\{\}}
-\begin{table}
-\begin{tabular}{|p{0.15\textwidth}|p{0.65\textwidth}|}
-\hline
-Xpt & Sets the size of the main font in the document. Default: 10pt. \\
-a4paper, \newline letterpaper & Defines the paper size. Default: letter/A4. \\
-fleqn & displays formulas left-aligned instead of centered. \\
-leqno & Places the numbering of formulas on the left hand side instead of the right. \\
-titlepage,\newline  notitlepage & Specifies whether a new page should be started after the document title or not. The article class does not start a new page by default, while report and book do.\\
-onecolumn,\newline  twocolumn & Instructs LaTeX to typeset the document in one column or two columns. \\
-\end{tabular}
-\end{table}
-\end{frame}
-
-
-%**********************************************FRAME***************************************
-
-\begin{frame}{$\backslash$documentclass$[$\textbf{options}$]$\{\} cont \dots}
-\begin{table}
-\begin{tabular}{|p{0.15\textwidth}|p{0.65\textwidth}|}
-twoside,\newline  oneside & double or single sided output. Article and report are single sided and the book is double sided by default. \\
-landscape & Changes the layout of the document to print in landscape mode. \\
-openright,\newline  openany & Makes chapters begin either only on right hand pages or on the next page available. This does not work with the article class, as it does not know about chapters. \\
-draft & Draft - no images. \\
-\end{tabular}
-\end{table}
-\end{frame}
-
-
-%**********************************************FRAME***************************************
 \begin{frame}{Fonts}
 \begin{itemize}
 \item \tiny $\backslash$tiny
@@ -244,192 +216,6 @@ $\backslash$ & \$$\backslash$backslash\$ \\
 \end{frame}
 
 
-%**********************************************FRAME***************************************
-
-
-%**********************************************FRAME***************************************
-\begin{frame}{Equations}
-The Energy-Momentum Relation: $E^2 = (m_0c^2)^2 + (pc)^2$ \\
-\begin{equation}
- f(x)= \sin^2x+\frac{\tan \mathit{x}}{\log \mathit{x}} + \mathbf{X}^T\times\mathbf{X}
-\end{equation}
-
-\begin{equation*}
-\iint_{0}^{\infty}   f(x,y)dx dy
-\end{equation*}
-
-\begin{eqnarray}
-	y   & = & ax+b \nonumber\\
-	y+1 & = & ax+(b+1)\\
-	    & = & ax+(b+2)-1
-\end{eqnarray}
-
-\end{frame}
-
-%**********************************************FRAME***************************************
-\begin{frame}{Equations cont\dots}
-
-\begin{multline}
-f(x)=a1x_1+a2x_2+a3x_3+a_4x_4+
-\sqrt{a1x_1+a2x_2+a3x_3+a_4x_4}+\\
-a1x_1+a2x_2+a3x_3+a_4x_4+
-a1x_1+a2x_2+a3x_3+a_4x_4
-\end{multline}
-
-\begin{equation}
-A_{m,n} =
- \begin{pmatrix}
-  a_{1,1} & a_{1,2} & \cdots & a_{1,n} \\
-  a_{2,1} & a_{2,2} & \cdots & a_{2,n} \\
-  \vdots  & \vdots  & \ddots & \vdots  \\
-  a_{m,1} & a_{m,2} & \cdots & a_{m,n}
- \end{pmatrix}
-\end{equation}
-\end{frame}
-
-%**********************************************FRAME***************************************
-\begin{frame}{Matrix}
-\begin{center}
-\begin{tabular}{l c}
-\textbf{Environment name} &	\textbf{Surrounding delimiter} \\
-pmatrix	& $( matrix )$  \\
-bmatrix	&	$[ matrix ]$  \\
-Bmatrix	&	$\{ matrix \}$ \\
-vmatrix	&	$| matrix |$ \\
-Vmatrix &	$|| matrix ||$  \\
-\end{tabular}
-\end{center}
-\end{frame}
-
-%**********************************************FRAME***************************************
-\section{Tables}
-%**********************************************FRAME***************************************
-\begin{frame}{Table Environment}
-
-\begin{table}
-\begin{tabular}{ll} \hline
-\textbf{Option} & \textbf{Description} \\ \hline
-l  &	left-justified column \\
-c  &	centered column  \\
-r  &	right-justified column  \\
-p\{`width'\} &	paragraph column with text vertically aligned at the top  \\
-m\{`width'\} & 	paragraph column with text vertically aligned in the middle \\
-b\{`width'\} &	paragraph column with text vertically aligned at the bottom  \\
-| &	vertical line   \\
-|| &	double vertical line  \\
-\& & 	column separator \\
-$\backslash$$\backslash$ &	start new row (additional space may be specified after \\[6pt] & $\backslash$$\backslash$ using square brackets, \newline such as $\backslash$$\backslash$[6pt]) \\
-$\backslash$hline &	horizontal line \\
-$\backslash$newline & 	start a new line within a cell (in a paragraph column) \\
-$\backslash$cline\{i-j\} & 	partial horizontal line beginning in column i and ending in column j \\ \hline
-\end{tabular}
-\end{table}
-\end{frame}
-
-
-%**********************************************FRAME***************************************
-\begin{frame}{Table}
-\begin{table}
-\caption{Table without borders}
-\begin{tabular}{ l c r }
-  1 & 2 & 3 \\
-  4 & 5 & 6 \\
-  7 & 8 & 9 \\
-\end{tabular}\\
-\end{table}
-
-\begin{table}
-\caption{Table with borders}
-\begin{tabular}{| l |c| r| } 
-\hline
-  1 & 2 & 3 \\ \hline
-  4 & 5 & 6 \\ \hline
-  7 & 8 & 9 \\ \hline
-\end{tabular}
-\end{table}
-\end{frame}
-
-
-%**********************************************FRAME***************************************
-\begin{frame}{Table}
-Without specifying width for last column:
-\begin{center}
-    \begin{tabular}{| l | l | l | l |}
-    \hline
-    Day & Min Temp & Max Temp & Summary \\ \hline
-    Monday & 11C & 22C & A clear day with lots of sunshine.
-    However, the strong breeze will bring down the temperatures. \\ \hline
-    Tuesday & 9C & 19C & Cloudy with rain, across many northern regions. Clear spells
-    across most of Scotland and Northern Ireland,
-    but rain reaching the far northwest. \\ \hline
-    Wednesday & 10C & 21C & Rain will still linger for the morning.
-    Conditions will improve by early afternoon and continue
-    throughout the evening. \\
-    \hline
-    \end{tabular}
-\end{center}
-\end{frame}
-
-
-
-%**********************************************FRAME***************************************
-\begin{frame}{Table}
-Without specifying width for last column:
-With width specified:
-\begin{center}
-    \begin{tabular}{ | l | l | l | p{5cm} |}
-    \hline
-    Day & Min Temp & Max Temp & Summary \\ \hline
-    Monday & 11C & 22C & A clear day with lots of sunshine.  
-    However, the strong breeze will bring down the temperatures. \\ \hline
-    Tuesday & 9C & 19C & Cloudy with rain, across many northern regions. Clear spells
-    across most of Scotland and Northern Ireland,
-    but rain reaching the far northwest. \\ \hline
-    Wednesday & 10C & 21C & Rain will still linger for the morning.
-    Conditions will improve by early afternoon and continue
-    throughout the evening. \\
-    \hline
-    \end{tabular}
-\end{center}
-\end{frame}
-
-%**********************************************FRAME***************************************
-\begin{frame}{Multiple Columns}
-\begin{center}
-\begin{tabular}{l*{6}{c}r}
-Team              & P & W & D & L & F  & A & Pts \\
-\hline
-Manchester United & 6 & 4 & 0 & 2 & 10 & 5 & 12  \\
-Celtic            & 6 & 3 & 0 & 3 &  8 & 9 &  9  \\
-Benfica           & 6 & 2 & 1 & 3 &  7 & 8 &  7  \\
-FC Copenhagen     & 6 & 2 & 1 & 3 &  5 & 8 &  7  \\
-\end{tabular}
-\end{center}
-\end{frame}
-
-
-%**********************************************FRAME***************************************
-\begin{frame}{Multi-Column}
-\begin{center}
-\begin{tabular}{ |l|l| }
-  \hline
-  \multicolumn{2}{|c|}{Team sheet} \\
-  \hline
-  GK & Paul Robinson \\
-  LB & Lucus Radebe \\
-  DC & Michael Duberry \\
-  DC & Dominic Matteo \\
-  RB & Dider Domi \\
-  MC & David Batty \\
-  MC & Eirik Bakke \\
-  MC & Jody Morris \\
-  FW & Jamie McMaster \\
-  ST & Alan Smith \\
-  ST & Mark Viduka \\
-  \hline
-\end{tabular}
-\end{center}
-\end{frame}
 
 
 

@@ -1,3 +1,5 @@
+*.pyg*
+*.vrb*
 *.tdo*
 .DS_Store*
 *.aux*

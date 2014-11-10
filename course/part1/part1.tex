@@ -1,0 +1,125 @@
+\documentclass[10pt,times]{beamer}
+\input{preamble.tex}
+\subtitle{Part I: Writing papers using \LaTeX}
+%***************************** Title page **************************************
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+%*******************************************************************************
+%**************************** Introduction *************************************
+%*******************************************************************************
+\section{Sections and subsections}
+
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
+\begin{frame}{Sections}
+\begin{itemize}
+\item To generate sections in \LaTeX: \cmdbs{section\{name-here\}}
+\item Subsection: \cmdbs{subsection\{name-here\}}
+\item Subsubsection: \cmdbs{subsubsection\{name-here\}}
+\item Subsections without numbering \cmdbs{subsection*\{name-here\}}
+
+\end{itemize}
+\end{frame}
+
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
+\begin{frame}{Title and author name}
+Before you begin typing your document, i.e., \cmdbs{begin\{document\}} you need 
+to define the author name and title.
+\begin{itemize}
+\item Title of the document in \LaTeX: \cmdbs{title\{name-here\}}
+\item Author name: \cmdbs{author\{name-here\}}
+\item Set a specific date: \cmdbs{date\{date-here\}}
+\item How do you not print date: \cmdbs{date\{\}}
+\end{itemize}
+\centering
+This only defines what the title of the document, author name and date create. 
+It does not print it. To print the meta-data, do \cmdbs{maketitle} after begin 
+document
+\end{frame}
+
+
+\begin{frame}{$\backslash$documentclass$[$\textbf{options}$]$\{\}}
+\begin{table}
+\begin{tabularx}{0.9\textwidth}{p{0.2\textwidth} X}
+\toprule
+Options & What they do \\ \midrule
+Xpt & Sets the size of the main font in the document. Default: 10pt. \\
+a4paper, \newline letterpaper & Defines the paper size. Default: letter/A4. \\
+fleqn & displays formulas left-aligned instead of centered. \\
+leqno & Places the numbering of formulas on the left hand side instead of the right. \\
+titlepage,\newline  notitlepage & Specifies whether a new page should be started after 
+the document title or not. The article class does not start a new page by default, while 
+report and book do.\\
+onecolumn,\newline  twocolumn & Instructs LaTeX to typeset the document in one column or 
+two columns. \\
+\end{tabularx}
+\end{table}
+\end{frame}
+
+
+%**********************************************FRAME***************************************
+
+\begin{frame}{$\backslash$documentclass$[$\textbf{options}$]$\{\} cont \dots}
+\begin{table}
+\begin{tabularx}{0.9\textwidth}{p{0.15\textwidth} X}
+\toprule
+Options & What they do \\ \midrule
+twoside,\newline  oneside & double or single sided output. Article and report are single 
+sided and the book is double sided by default. \\
+landscape & Changes the layout of the document to print in landscape mode. \\
+openright,\newline  openany & Makes chapters begin either only on right hand pages or on 
+the next page available. This does not work with the article class, as it does not know 
+about chapters. \\
+draft & Draft - no images. \\ \bottomrule
+\end{tabularx}
+\end{table}
+\end{frame}
+
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
+\begin{frame}{Fonts}
+\begin{itemize}
+\item \tiny $\backslash$tiny
+\item \scriptsize $\backslash$scriptsize
+\item \footnotesize $\backslash$footnotesize
+\item \small $\backslash$small
+\item \normalsize $\backslash$normalsize
+\item \large $\backslash$large
+\item \Large $\backslash$Large
+\item \LARGE $\backslash$LARGE
+\item \huge $\backslash$huge
+\item \Huge $\backslash$Huge
+\end{itemize}
+\end{frame}
+
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
+\begin{frame}{Exercise 4: Sections}
+\begin{itemize}
+\item Add title, author and print date
+\item Set font size to 11 pt
+\item Create sections and subsections
+\end{itemize}
+\begin{center}
+\fbox{\href{\wlnewdoc{Ex4-Sections/Ex4-Sections.tex}}{%
+Click to open this exercise in \wllogo{}}}
+\end{center}
+
+\begin{itemize}
+\item Hint: Don't forget to do \cmdbs{maketitle} and don't forget 
+\cmmd{begin\{document\}} and \cmmd{end\{document\}}
+\fbox{\href{\wlnewdoc{Ex4-Sections/Ex4-Sections-solution.tex}}{%
+click here to see my solution}}.
+\end{itemize}
+
+\end{frame}
+
+
+\end{document}

@@ -42,7 +42,7 @@
    \begin{VerbatimOut}{example.out}}
   {\end{VerbatimOut}
    \setlength{\parindent}{0pt}
-   \fbox{\begin{tabular}{l l}
+   \fbox{\begin{tabular}{l| l}
    \begin{minipage}{0.55\linewidth}
      \inputminted[fontsize=\small,resetmargins]{latex}{example.out}
    \end{minipage} &
@@ -51,6 +51,20 @@
    \end{minipage}
    \end{tabular}}}
 
+\newenvironment{exampletwouptiny}
+  {\VerbatimEnvironment
+   \begin{VerbatimOut}{example.out}}
+  {\end{VerbatimOut}
+   \setlength{\parindent}{0pt}
+   \fbox{\begin{tabular}{l|l}
+   \begin{minipage}{0.55\linewidth}
+     \inputminted[fontsize=\scriptsize,resetmargins]{latex}{example.out}
+   \end{minipage} &
+   \begin{minipage}{0.35\linewidth}
+     \setlength{\parskip}{6pt plus 1pt minus 1pt}%
+     \raggedright\scriptsize\input{example.out}
+   \end{minipage}
+   \end{tabular}}}
 
 % ******************************** Meta-data ***********************************
 \mode<presentation>

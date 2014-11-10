@@ -201,86 +201,71 @@ or a recent \href{http://www.mozilla.org/en-US/firefox/new/}{FireFox}.
 \end{frame}
 
 
+%*******************************************************************************
 %******************************* Frame *****************************************
+%*******************************************************************************
 \begin{frame}{$\backslash$documentclass\{\}}
 
 \begin{table}
-\begin{tabular}{|l|p{0.75\textwidth}|}
-\hline
-article & articles in scientific journals, presentations, short reports, program documentation, invitations, \dots \\ \hline
-IEEEtran & IEEE Transactions format.\\ \hline
-proc & A class for proceedings based on the article class.\\ \hline
-minimal & Is as small as it can get. It only sets a page size and a base font. It is mainly used for debugging purposes.\\ \hline
-report & For longer reports containing several chapters, small books, thesis, \dots \\ \hline
-book & For real books.\\ \hline
-slides & For slides. The class uses big sans serif letters.\\ \hline
-memoir & For changing sensibly the output of the document. It is based on the book class, but you can create any kind of document with it\\ \hline
-letter & For writing letters. \\ \hline
-beamer& For writing presentations \\ \hline
-\end{tabular}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{0.9\textwidth}{l X}
+\toprule
+minimal & Is as small as it can get. For debugging purposes.\\ 
+letter & For writing letters. \\ 
+article & articles in journals, documentation, invitations, \dots \\ 
+proc & A class for proceedings based on the article class.\\ 
+report & For longer reports containing several chapters \dots \\
+book & For real books.\\
+memoir & For advanced book style. \\
+beamer& For writing presentations \\ \bottomrule
+\end{tabularx}
 \end{table}
 \end{frame}
 
 
-%**********************************************FRAME***************************************
-\begin{frame}{Fonts}
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
+\begin{frame}[fragile]{Typesetting Caveats}
+\small
 \begin{itemize}
-\item \tiny $\backslash$tiny
-\item \scriptsize $\backslash$scriptsize
-\item \footnotesize $\backslash$footnotesize
-\item \small $\backslash$small
-\item \normalsize $\backslash$normalsize
-\item \large $\backslash$large
-\item \Large $\backslash$Large
-\item \LARGE $\backslash$LARGE
-\item \huge $\backslash$huge
-\item \Huge $\backslash$Huge
-\end{itemize}
-\end{frame}
+\item Quotation marks are a bit tricky: use a backtick \keys{\`{}} on the 
+left and an apostrophe \keys{\'{}} on the right.
 
+\begin{exampletwouptiny}
+Single quotes: `text'.
 
-%**********************************************FRAME***************************************
+Double quotes: ``text''.
+\end{exampletwouptiny}
 
-\begin{frame}{Restricted Characters}
-\begin{table}
-\begin{tabular}{cc}
-\hline
-\textbf{Character} & \textbf{How to type in LaTeX} \\  \hline
-\# & $\backslash$\# \\ 
-\& & $\backslash$\& \\ 
-\$ & $\backslash$\$ \\
-\% & $\backslash$\% \\ 
-$\backslash$ & \$$\backslash$backslash\$ \\ 
-\_ & $\backslash$\_ \\
-\{ & $\backslash$\{ \\
-\} & $\backslash$\} \\
-
+\item Some common characters have special meanings in \LaTeX:\\[1ex]
+\begin{tabular}{cl}
+\keys{\%} & percent sign (comment)             \\
+\keys{\#} & hash sign (macro parameter \#1)    \\
+\keys{\&} & ampersand (align)                  \\
+\keys{\$} & dollar sign (in-line math)         \\
 \end{tabular}
-\end{table}
-\end{frame}
+\item If you just type these, you'll get an error. If you want one to appear in
+the output, you have to \emph{escape} it by preceding it with a backslash.
 
-
-
-
-
-\section{Acknowledgements}
-%**********************************************FRAME***************************************
-\begin{frame}{Useful Tips}
-\begin{itemize}
-\item LyX – WYSIWYG LaTeX editor (please don’t kill me!)
-\item Libre Office / OpenOffice – Word to LaTeX conversion
-\item RTF2LaTeX to convert doc to \LaTeX files
-\item Tired of finding the symbol name try \href{http://detexify.kirelabs.org/classify.html}{http://detexify.kirelabs.org/classify.html}
-\item BibTex for Word - \href{http://www.ee.ic.ac.uk/hp/staff/dmb/perl/index.html}{http://www.ee.ic.ac.uk/hp/staff/dmb/perl/index.html}
-\item Tex Formula Addin for Powerpoint – \href{http://users.ecs.soton.ac.uk/srg/softwaretools/presentation/TeX4PPT/}{http://www.ee.ic.ac.uk/hp/staff/dmb/perl/index.html} 
+\begin{exampletwoup}
+\$\%\&\#
+\end{exampletwoup}
 \end{itemize}
 \end{frame}
+
+
 
 %**********************************************FRAME***************************************
 \begin{frame}{Acknowlegements}
 This \LaTeX for Beginners course is loosely based on and examples from:
 \begin{itemize}
-\item WikiBook on \LaTeX: \href{https://en.wikibooks.org/wiki/LaTeX}{https://en.wikibooks.org/wiki/LaTeX}
+\item John Miller's An interactive introduction to \LaTeX: 
+\href{https://www.writelatex.com/blog/7}{https://www.writelatex.com/blog/7}
+\item WikiBook on \LaTeX: 
+\href{https://en.wikibooks.org/wiki/LaTeX}{https://en.wikibooks.org/wiki/LaTeX}
+\item Share\LaTeX Learn: 
+\href{https://www.sharelatex.com/learn}{https://www.sharelatex.com/learn}
 \item CUED Textprocessing: \href{http://www.eng.cam.ac.uk/help/tpl/textprocessing/}{http://www.eng.cam.ac.uk/help/tpl/textprocessing/}
 \item UCS Course on \LaTeXe: \href{http://www.ucs.cam.ac.uk/docs/course-notes/unix-courses/earlier/latex}{http://www.ucs.cam.ac.uk/docs/course-notes/unix-courses/earlier/latex}
 \end{itemize}

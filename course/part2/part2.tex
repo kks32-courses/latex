@@ -220,6 +220,94 @@ Click to open this exercise in \wllogo{}}}
 
 \item Never use \cmdbs{hline} or \cmdbs{cline}, use \cmdbs{toprule}, 
 \cmdbs{midrule}, \cmdbs{bottomrule} and \cmdbs{cmidrule\{i-j\}}
+
+\item Visual table editor: 
+\href{http://truben.no/table/}{http://truben.no/table/}
+\end{itemize}
+
+\begin{center}
+%
+\fbox{\href{\wlnewdoc{Ex7-Tables/Ex7-Tables-solution.tex}}{%
+Click to open my solution}}.
+\end{center}
+
+\end{frame}
+
+
+
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
+\subsection{bib\TeX}
+\begin{frame}[fragile]{\insertsubsection{} 1}
+\begin{itemize}
+\item Put your references in a \bftt{.bib} file in `bibtex' database format:
+\inputminted[fontsize=\scriptsize,frame=single]{latex}{bib-example.bib}
+\item Most reference managers can export to bibtex format.
+\end{itemize}
+\end{frame}
+
+
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
+\begin{frame}[fragile]{\insertsubsection{} 2}
+\begin{itemize}
+\item Each entry in the \bftt{.bib} file has a \emph{key} that you can use to
+reference it in the document. For example, \bftt{Jacobson1999Towards} is the 
+key for this article:
+\begin{minted}[fontsize=\small,frame=single]{latex}
+@Article{Jacobson1999Towards,
+  author = {Van Jacobson},
+  ...
+}
+\end{minted}
+\item It's a good idea to use a key based on the name, year and title.
+\item \LaTeX{} can automatically format your in-text citations and generate a
+list of references; it knows most standard styles, and you can design your own.
+\end{itemize}
+\end{frame}
+
+
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
+\begin{frame}[fragile]{\insertsubsection{} 3}
+\begin{itemize}
+\item Use the \bftt{natbib} package\footnote{There is a new package with more
+  features named \bftt{biblatex} but most of the articles templates still use
+  \bftt{natbib}.} with \cmdbs{citet} and \cmdbs{citep}.
+\item Reference \cmdbs{bibliography} at the end, and specify a 
+\cmdbs{bibliographystyle}.
+\end{itemize}
+\begin{minipage}{0.55\linewidth}
+\inputminted[fontsize=\scriptsize,frame=single,resetmargins]{latex}%
+  {bib-example.tex}
+\end{minipage}
+\begin{minipage}{0.35\linewidth}
+\includegraphics[width=\textwidth,clip,trim=1.8in 5in 1.8in 
+1in]{bib-example.pdf}
+\end{minipage}
+\end{frame}
+
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
+\begin{frame}[fragile]{Exercise 8: Bibliography}
+
+\begin{center}
+\fbox{\href{\wlnewdoc{Ex7-Tables/Ex7-Tables.tex}}{%
+Click to open this exercise in \wllogo{}}}
+\end{center}
+
+\begin{itemize}
+\item Use \cmmd{tabularx} package for tables with paragraph text.
+
+\item Never use \cmdbs{hline} or \cmdbs{cline}, use \cmdbs{toprule}, 
+\cmdbs{midrule}, \cmdbs{bottomrule} and \cmdbs{cmidrule\{i-j\}}
+
+\item Visual table editor: 
+\href{http://truben.no/table/}{http://truben.no/table/}
 \end{itemize}
 
 \begin{center}

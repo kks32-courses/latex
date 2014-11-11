@@ -24,10 +24,27 @@
 \end{itemize}
 \end{frame}
 
+
+
 %*******************************************************************************
 %******************************* Frame *****************************************
 %*******************************************************************************
-\begin{frame}{Title and author name}
+\subsection{Sections}
+\begin{frame}{\insertsubsection}
+\begin{minipage}{0.55\linewidth}
+\inputminted[fontsize=\scriptsize,frame=single,resetmargins]{latex}%
+  {structure-sections.tex}
+\end{minipage}
+\begin{minipage}{0.35\linewidth}
+\includegraphics[width=\textwidth,clip,trim=1.5in 6in 4in 
+1in]{structure-sections.pdf}
+\end{minipage}
+\end{frame}
+
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
+\begin{frame}{Title and Abstract}
 Before you begin typing your document, i.e., \cmdbs{begin\{document\}} you need 
 to define the author name and title.
 \begin{itemize}
@@ -42,6 +59,31 @@ It does not print it. To print the meta-data, do \cmdbs{maketitle} after begin
 document
 \end{frame}
 
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
+
+\subsection{Title and Abstract}
+\begin{frame}[fragile]{\insertsubsection}
+\begin{itemize}{\small
+\item Tell \LaTeX{} the \cmdbs{title} and \cmdbs{author} names in the preamble.
+\item Then use \cmdbs{maketitle} in the document to actually create the title.
+\item Use the \bftt{abstract} environment to make an abstract.
+}\end{itemize}
+\centering
+\begin{minipage}{0.45\linewidth}
+\inputminted[fontsize=\scriptsize,frame=single,resetmargins]{latex}%
+  {structure-title.tex}
+\end{minipage}
+\begin{minipage}{0.45\linewidth}
+\includegraphics[width=\textwidth,clip,trim=2.2in 7in 2.2in 
+2in]{structure-title.pdf}
+\end{minipage}
+\end{frame}
+
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
 
 \begin{frame}{$\backslash$documentclass$[$\textbf{options}$]$\{\}}
 \begin{table}

@@ -37,30 +37,30 @@
 \end{exampletwoup}
 \end{frame}
 
-\end{document}
 
 %*******************************************************************************
 %******************************* Frame *****************************************
 %*******************************************************************************
 \begin{frame}[fragile]{Figures}
 \begin{itemize}
-\item \LaTeX can be easily extended using a \emph{package} to typeset images.
+\item For captioning a figure, you can use \cmdbs{usepackage\{caption\}}
 
-\item Use the \cmmd{caption} package \cmdbs{usepackage\{caption\}}
+\item tweak the location, label, separator: \cmmd{[labelsep=space, 
+tableposition=top]\{caption\}}
 
-\item Always use relative scaling to specify the width of the figure, i.e., 
+\item I prefer to centre the figure. To do that use \cmdbs{centering}
 
-\cmmd{[width = 0.75\bs textwidth]}
-
-\item Never ever use absolute values to scale your images!
-
-\item Set either the width or the height of the image. Or use \cmmd{scale}
+\item You can use \cmmd{\~\bs cref\{fig:minion\}} to cross reference the figure.
 
 \end{itemize}
 \begin{exampletwoup}
 \begin{figure}
+\centering
 \includegraphics[width=0.75\textwidth]
                            {figs/minion}
+\caption[Minion]{
+	Dave the Minion from Despicable Me!}
+\label{fig:minion}
 \end{figure}
 \end{exampletwoup}
 \end{frame}
@@ -68,55 +68,58 @@
 %*******************************************************************************
 %******************************* Frame *****************************************
 %*******************************************************************************
-\begin{frame}[fragile]{Figures}
-\begin{itemize}
-\item \LaTeX can be easily extended using a \emph{package} to typeset images.
-
-\item To use graphics in your \LaTeX document use \cmdbs{usepackage\{graphicx\}}
-
-\item Always use relative scaling to specify the width of the figure, i.e., 
-
-\cmmd{[width = 0.75\bs textwidth]}
-
-\item Never ever use absolute values to scale your images!
-
-\item Set either the width or the height of the image. Or use \cmmd{scale}
-
-\end{itemize}
-\begin{exampletwoup}
-\begin{figure}
-\includegraphics[width=0.75\textwidth]
-                           {figs/minion}
-\end{figure}
-\end{exampletwoup}
+\begin{frame}[fragile]{\bs begin[option]\{figure\}}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\textwidth}{l X}
+\toprule
+\textbf{Parameter} &	\textbf{Position} \\ \midrule
+h &	Place the float here, i.e., approximately at the same point it occurs in 
+the source text (however, not exactly at the spot) \\
+t &	Position at the top of the page. \\
+b &	Position at the bottom of the page. \\
+p &	Put on a special page for floats only. \\
+! &	Override internal parameters LaTeX uses for determining "good" float 
+positions. \\
+H &	Places the float at precisely the location in the LaTeX code. Requires the 
+float package. This is somewhat equivalent to h! \\ \bottomrule
+\end{tabularx}
 \end{frame}
-
-\end{document}
 
 %*******************************************************************************
 %******************************* Frame *****************************************
 %*******************************************************************************
-\begin{frame}[fragile]{Figures}
-\begin{itemize}
-\item \LaTeX can be easily extended using a \emph{package} to typeset images.
+\begin{frame}[fragile]{Subcaption}
 
-\item Use the \cmmd{caption} package \cmdbs{usepackage\{caption\}}
+I can cite Wall-E (see~\cref{fig:WallE}) and Minions in despicable me 
+(\cref{fig:Minnion}).~\Cref{fig:animations} lets me cite the whole figure.
 
-\item Always use relative scaling to specify the width of the figure, i.e., 
-
-\cmmd{[width = 0.75\bs textwidth]}
-
-\item Never ever use absolute values to scale your images!
-
-\item Set either the width or the height of the image. Or use \cmmd{scale}
-
-\end{itemize}
-\begin{exampletwoup}
+\begin{exampletwouptiny}
 \begin{figure}
-\includegraphics[width=0.75\textwidth]
-                           {figs/minion}
+  \centering
+  \begin{subfigure}[b]{0.3\textwidth}
+    \includegraphics[width=\textwidth]
+			    {figs/TomandJerry}
+    \caption{Tom and Jerry}
+    \label{fig:TomJerry}   
+  \end{subfigure}             
+  \begin{subfigure}[b]{0.3\textwidth}
+    \includegraphics[width=\textwidth]{figs/WallE}
+    \caption{Wall-E}
+    \label{fig:WallE}
+  \end{subfigure}             
+  \begin{subfigure}[b]{0.3\textwidth}
+    \includegraphics[width=\textwidth]{figs/minion}
+    \caption{Minions}
+    \label{fig:Minnion}
+  \end{subfigure}
+  \caption{Best Animations}
+  \label{fig:animations}
 \end{figure}
-\end{exampletwoup}
+
+\end{exampletwouptiny}
+
+
 \end{frame}
+
 
 \end{document}

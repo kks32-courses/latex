@@ -130,7 +130,8 @@ Click to open this exercise in \wllogo{}}}
 \end{center}
 
 \begin{itemize}
-\item Please upload the figures in \cmmd{figs/} to the write\LaTeX project.
+\item Please upload the figures in \cmmd{figs/} to the write\LaTeX project. or 
+point to raw URLs on github.
 \item Format these the King's college picture. Change it's location: (top, 
 bottom, here, new page)
 \item Arrange Tom, WallE and Dave inside a single figure environment 
@@ -140,11 +141,94 @@ vertically.
 \end{itemize}
 
 \begin{center}
-%Ex6-Pictures/Ex6-Pictures-solution.tex
-\fbox{\href{\wlnewdoc{Ex6-Pictures.zip}}{%
+%
+\fbox{\href{\wlnewdoc{Ex6-Pictures/Ex6-Pictures-solution.tex}}{%
 Click to open my solution}}.
 \end{center}
 
 \end{frame}
+
+
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
+\subsection{Tables}
+\begin{frame}[fragile]{Tables}
+\begin{itemize}
+\item Tables in \LaTeX{} take some getting used to.
+\item The argument specifies column alignment --- \textbf{l}eft, 
+\textbf{r}ight, \textbf{r}ight.
+\begin{exampletwouptiny}
+\begin{tabular}{lcr}
+Item   & Qty & Unit \$ \\
+Widget & 1   & 199.99  \\
+Gadget & 2   & 399.99  \\
+Cable  & 3   & 19.99   \\
+\end{tabular}
+\end{exampletwouptiny}
+\item Don't use vertical lines, it's ugly. Use \cmdbegin{booktabs} to create 
+horizontal lines. Never use \cmdbs{hline}
+\begin{exampletwouptiny}
+\begin{table}[h]
+\caption{Cost}
+\begin{tabular}{lrr} \toprule
+Item   & Qty & Unit \$ \\ \midrule
+Widget & 1   & 199.99  \\
+Gadget & 2   & 399.99  \\
+Cable  & 3   & 19.99   \\ \bottomrule
+\end{tabular}
+\label{t:cost}
+\end{table}
+\end{exampletwouptiny}
+\item Use an ampersand \keys{\&} to separate columns and a double 
+backslash \keys{\bs}\keys{\bs} to start a new row (like in 
+the \bftt{align*} environment that we saw in part 1).
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Table Environment}
+
+\begin{table}
+\begin{tabularx}{0.9\textwidth}{l X} \toprule
+\textbf{Option} & \textbf{Description} \\ \midrule
+l  &	left-justified column \\
+c  &	centered column  \\
+r  &	right-justified column  \\
+p\{`width'\} &	paragraph column with text vertically aligned at the top  \\
+m\{`width'\} & 	paragraph column with text vertically aligned in the middle \\
+b\{`width'\} &	paragraph column with text vertically aligned at the bottom  \\
+\cmdbs{\&} & 	column separator \\
+\cmmd{\bs \bs} &	start new row (additional space may be specified \\
+\cmdbs{cmidrule\{i-j\}} & 	partial horizontal line beginning in column i and 
+ending in column j \\ \bottomrule
+\end{tabularx}
+\end{table}
+\end{frame}
+
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
+\begin{frame}[fragile]{Exercise 7: Tables}
+
+\begin{center}
+\fbox{\href{\wlnewdoc{Ex7-Tables/Ex7-Tables.tex}}{%
+Click to open this exercise in \wllogo{}}}
+\end{center}
+
+\begin{itemize}
+\item Use \cmmd{tabularx} package for tables with paragraph text.
+
+\item Never use \cmdbs{hline} or \cmdbs{cline}, use \cmdbs{toprule}, 
+\cmdbs{midrule}, \cmdbs{bottomrule} and \cmdbs{cmidrule\{i-j\}}
+\end{itemize}
+
+\begin{center}
+%
+\fbox{\href{\wlnewdoc{Ex7-Tables/Ex7-Tables-solution.tex}}{%
+Click to open my solution}}.
+\end{center}
+
+\end{frame}
+
 
 \end{document}

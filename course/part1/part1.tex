@@ -85,59 +85,62 @@ document
 %******************************* Frame *****************************************
 %*******************************************************************************
 
-\begin{frame}{$\backslash$documentclass$[$\textbf{options}$]$\{\}}
+\begin{frame}{\bs documentclass$[$\textbf{options}$]$\{\}}
 \begin{table}
-\begin{tabularx}{0.9\textwidth}{p{0.2\textwidth} X}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{0.97\textwidth}{lll}
 \toprule
-Options & What they do \\ \midrule
-Xpt & Sets the size of the main font in the document. Default: 10pt. \\
-a4paper, \newline letterpaper & Defines the paper size. Default: letter/A4. \\
-fleqn & displays formulas left-aligned instead of centered. \\
-leqno & Places the numbering of formulas on the left hand side instead of the right. \\
-titlepage,\newline  notitlepage & Specifies whether a new page should be started after 
-the document title or not. The article class does not start a new page by default, while 
-report and book do.\\
-onecolumn,\newline  twocolumn & Instructs LaTeX to typeset the document in one column or 
-two columns. \\
+\textbf{Argument} & \textbf{Possible Values} & \textbf{Default Value} \\
+\midrule
+Typeface Size & 10pt, 11pt, 12pt & 10pt   \\
+Paper Size & a4paper, a5paper, & letterpaper \\
+				& letterpaper, legalpaper &  \\
+				& executivepaper b5paper &  \\
+Paper Orientation & portrait, landscape & portrait \\
+Title Page & titlepage, notitlepage & titlepage \\
+Equation Numbering & leqno & Right side \\ 
+Equation Alignment & fleqn & Centered \\ 
+Output Type				& draft, final & final \\
+Layout Type & oneside, twoside & oneside  \\
+Chapter Opening & openright, openany & openright \\
+Columns & onecolumn, twocolumn & onecolumn \\
+\bottomrule
 \end{tabularx}
 \end{table}
 \end{frame}
 
-
-%**********************************************FRAME***************************************
-
-\begin{frame}{$\backslash$documentclass$[$\textbf{options}$]$\{\} cont \dots}
-\begin{table}
-\begin{tabularx}{0.9\textwidth}{p{0.15\textwidth} X}
-\toprule
-Options & What they do \\ \midrule
-twoside,\newline  oneside & double or single sided output. Article and report are single 
-sided and the book is double sided by default. \\
-landscape & Changes the layout of the document to print in landscape mode. \\
-openright,\newline  openany & Makes chapters begin either only on right hand pages or on 
-the next page available. This does not work with the article class, as it does not know 
-about chapters. \\
-draft & Draft - no images. \\ \bottomrule
-\end{tabularx}
-\end{table}
-\end{frame}
 
 %*******************************************************************************
 %******************************* Frame *****************************************
 %*******************************************************************************
-\begin{frame}{Fonts}
-\begin{itemize}
-\item \tiny $\backslash$tiny
-\item \scriptsize $\backslash$scriptsize
-\item \footnotesize $\backslash$footnotesize
-\item \small $\backslash$small
-\item \normalsize $\backslash$normalsize
-\item \large $\backslash$large
-\item \Large $\backslash$Large
-\item \LARGE $\backslash$LARGE
-\item \huge $\backslash$huge
-\item \Huge $\backslash$Huge
-\end{itemize}
+\begin{frame}{Font types}
+\begin{block}{Font face}
+\bs emph\{\emph{text}\}, 
+\bs textbf\{\textbf{text}\}, 
+\bs textit\{\textit{text}\},
+\bs texttt\{\texttt{text}\},
+\bs textrm\{\textrm{text (roman)}\},
+\bs textsf\{\textsf{text (sans font)}\},
+\bs textsc\{\textsc{text}\}
+\end{block}
+\begin{block}{Font size}
+\tiny \bs tiny,
+\scriptsize \bs scriptsize,
+\footnotesize \bs footnotesize,
+\small \bs small,
+\normalsize \bs normalsize,
+\large \bs large,
+\Large \bs Large,
+\LARGE \bs LARGE,
+\huge \bs huge,
+\Huge \bs Huge
+\end{block}
+
+\begin{block}{Alignment}
+\cmdbegin{flushleft / flushright / center}\\
+\ldots\\
+\cmdend{flushleft / flushright / center}
+\end{block}
 \end{frame}
 
 %*******************************************************************************

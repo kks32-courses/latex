@@ -61,7 +61,8 @@ figure. Requires package \cmmd{cleveref}
                            {figs/minion}
 \caption[Minion]{
 	Dave the Minion from Despicable Me!}
-\label{fig:minion}
+\label{fig:minion} % Unique identifier 
+                   % for cross-reference
 \end{figure}
 \end{exampletwoup}
 \end{frame}
@@ -133,18 +134,18 @@ Click to open this exercise in \wllogo{}}}
 \begin{itemize}
 \item Please upload the figures in \cmmd{figs/} to the write\LaTeX project. or 
 point to raw URLs on github.
-\item Format these the King's college picture. Change it's location: (top, 
-bottom, here, new page)
+\item Format the King's college picture. Change it's location: (top, 
+bottom, here, new page) and rescale the figure.
 \item Arrange Tom, WallE and Dave inside a single figure environment 
 vertically.
-\item Use Fig. to refer to figures
-\item Create a list of figures.
+\item Cross-reference the figures (using \cmmd{cleveref}).
+\item Create a list of figures. Use \cmdbs{listoffigures}.
 \end{itemize}
 
 \begin{center}
 %
 \fbox{\href{\wlnewdoc{Ex6-Pictures/Ex6-Pictures-solution.tex}}{%
-Click to open my solution}}.
+Click to open my solution}}
 \end{center}
 
 \end{frame}
@@ -158,7 +159,7 @@ Click to open my solution}}.
 \begin{itemize}
 \item Tables in \LaTeX{} take some getting used to.
 \item The argument specifies column alignment --- \textbf{l}eft, 
-\textbf{r}ight, \textbf{r}ight.
+\textbf{c}enter, \textbf{r}ight.
 \begin{exampletwouptiny}
 \begin{tabular}{lcr}
 Item   & Qty & Unit \$ \\

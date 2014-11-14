@@ -204,7 +204,7 @@ or a recent \href{http://www.mozilla.org/en-US/firefox/new/}{FireFox}.
 %*******************************************************************************
 %******************************* Frame *****************************************
 %*******************************************************************************
-\begin{frame}{$\backslash$documentclass\{\}}
+\begin{frame}{\bs documentclass\{\}}
 
 \begin{table}
 \renewcommand{\arraystretch}{1.5}
@@ -323,6 +323,33 @@ Eg., \cmdbs{documentclass\{article\}}
 \item Give you more control over the commands
 \end{itemize}
 Eg., \cmdbs{documentclass\lbrack12pt\rbrack\{article\}}
+\end{block}
+\end{frame}
+
+
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
+\begin{frame}{Packages}
+Packages allow you to further customize \LaTeX
+\begin{block}{The command:}
+\cmdbs{usepackage\{amsmath\}}
+\end{block}
+
+\begin{block}{Common packages}
+\begin{tabularx}{0.95\textwidth}{lX}
+\toprule
+Environment & Packages \\ \midrule
+Maths & amsmath, amsfonts, amssymb \\ 
+Maths Times Font & {mathptx} \\
+Figures & graphicx, epsfig \\
+Table & tabularx, booktabs \\
+Pagelayout & geometry \\
+Hyperlinks & hyperref \\
+Algorithms and code & algpseudocode, algorithm, listings \\
+Color & color, xcolor \\
+\bottomrule
+\end{tabularx}
 \end{block}
 \end{frame}
 

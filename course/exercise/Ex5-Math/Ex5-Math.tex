@@ -1,25 +1,38 @@
-%\documentclass[times]{article}
-%\usepackage{amsfonts}
-%\usepackage{amsmath}
-%\usepackage{amssymb}
-%\usepackage{mathptmx}
-%\usepackage{cleveref}
-%\title{Maths}
-%\author{Krishna Kumar}
-%\date{}
+
+\documentclass[times]{article}
+
+%% 1. Uncomment the packages.
+%\usepackage{amsfonts} % Math fonts
+%\usepackage{amsmath}  % Align environment
+%\usepackage{amssymb}  % Math symbols
+%\usepackage{mathptmx} % Math times font
+%\usepackage{cleveref} % Intelligent cross-referencing
+
+\title{Article with lots of equations}
+\author{Krishna Kumar}
+\date{}
+
 \begin{document}
-%\maketitle
 
-You can also do an inline equation of (a+b)2 = a2 + b2 + 2ab
+\maketitle
 
-The Schr\"{o}dinger's schrodinger. Also the one with multiple 
-equations and a single number is
+% 2. Align the following inline equation with mathmode $$. Use ^ for superscript
+% and _ for subscript
+You can also do an inline equation of (a+b)2 = a2 + b2 + 2ab.
 
-%5. It's time to have multiple equations and align them. Note: & aligns the 
+% 3. Make sure in-line equations are within the Mathmode, i.e., enclosed within $$
+Another inline equation is the Euler's equation: e^{i\pi}=-1. This beautiful equation connects three major constants of mathematics, Euler's Number \textit{e}, the ratio of the circumference of a circle to its diameter, pi, and the square root of -1, i.e., \textit{i}.
+
+% 4. Cross reference the equations. Use~\cref{eq:unique_label}
+I can refer to the Schr\"{o}dinger's equation %(cross-reference the equation).
+Also the one with multiple equations and a single number is %(cross-reference the equation).
+
+% 5. It's time to have multiple equations and align them. Note: & aligns the 
 % equations and see use of \nonumber. Uncomment the following section and see 
-% how it affects the output.  try using [fleqn] as a document class option to 
-%see what happens  then add & on left hand side of the equals sign on all 
-%equations and see the output like y & = ax+ b
+% how it affects the output. 
+
+% 6. Try using [fleqn] as a document class option to see what happens then add
+% & on left hand side of the equals sign on all equations and see the output like y & = ax+ b
 
 %\begin{align}
 %	y   & =  ax+b \nonumber\\
@@ -45,4 +58,5 @@ equations and a single number is
 %	y+1   =  ax+(b+1)\\
 %	      =  ax+(b+2)-1
 %\end{gather}
+
 \end{document}

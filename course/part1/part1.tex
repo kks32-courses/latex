@@ -257,6 +257,7 @@ period and \cmdbs{,,} to add a comma at the end of the equation.
 \begin{frame}{Ex 5a: Maths}
 
 \begin{itemize}
+\item Make sure inline equations are within the mathmode \cmmd{\$\dots\$}
 \item Format these two equations:
 \begin{equation*}
 i \hbar \frac{\partial}{\partial t} \Psi(r,t) = 
@@ -280,31 +281,6 @@ click here to see my solution}}.
 
 \end{frame}
 
-%*******************************************************************************
-%******************************* Frame *****************************************
-%*******************************************************************************
-\begin{frame}{Packages}
-Packages allow you to further customize \LaTeX
-\begin{block}{The command:}
-\cmdbs{usepackage\{amsmath\}}
-\end{block}
-
-\begin{block}{Common packages}
-\begin{tabularx}{0.95\textwidth}{lX}
-\toprule
-Environment & Packages \\ \midrule
-Maths & amsmath, amsfonts, amssymb \\ 
-Maths Times Font & {mathptx} \\
-Figures & graphicx, epsfig \\
-Table & tabularx, booktabs \\
-Pagelayout & geometry \\
-Hyperlinks & hyperref \\
-Algorithms and code & algpseudocode, algorithm, listings \\
-Color & color, xcolor \\
-\bottomrule
-\end{tabularx}
-\end{block}
-\end{frame}
 
 %*******************************************************************************
 %******************************* Frame *****************************************
@@ -320,7 +296,6 @@ Color & color, xcolor \\
 	    & = ax+(b+2)-1
 \end{align}
 
-
 \begin{align}
 \label{eq:yequation}
 \begin{aligned}
@@ -329,7 +304,6 @@ Color & color, xcolor \\
 	    & = ax+(b+2)-1
 \end{aligned}
 \end{align}
-
 
 \begin{center}
 \fbox{\href{\wlnewdoc{Ex5-Math/Ex5-Math.tex}}{%

@@ -195,6 +195,10 @@ Let $y = m x + b$ be \ldots
 \end{itemize}
 \end{frame}
 
+
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
 \begin{frame}[fragile]{Notation}
 \begin{itemize}
 \item Use caret \verb|^| for superscripts and underscore \cmmd{`\_'} 
@@ -222,9 +226,9 @@ $\Omega = \sum_{k=1}^{n} \omega_k$
 \end{itemize}
 \end{frame}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
 \begin{frame}[fragile]{\insertsubsection{}: Displayed Equations}
 \begin{itemize}
 \item If it's big and scary, \emph{display} it on its own line using
@@ -247,7 +251,13 @@ period and \cmdbs{,,} to add a comma at the end of the equation.
 \end{frame}
 
 
-\begin{frame}{Ex 5: Maths}
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
+\begin{frame}{Ex 5a: Maths}
+
+\begin{itemize}
+\item Format these two equations:
 \begin{equation*}
 i \hbar \frac{\partial}{\partial t} \Psi(r,t) = 
 \left[\frac{-\hbar^2}{2\mu}\nabla^2+V(r,t)\right]\Psi(r,t) \,,
@@ -257,21 +267,82 @@ i \hbar \frac{\partial}{\partial t} \Psi(r,t) =
 E^2 = (pc)^2 + (m_0 c^2)^2 \,.
 \end{equation*}
 
-
 \begin{center}
 \fbox{\href{\wlnewdoc{Ex5-Math/Ex5-Math.tex}}{%
 Click to open this exercise in \wllogo{}}}
 \end{center}
-\begin{itemize}
-\item Format these two equations:
-\item To format math you need to use additional packages 
-\item Add packages
+\item To format math you need to use \cmmd{equation} environment
 \item Use detexify to find out what the symbols are 
 \href{http://detexify.kirelabs.org/classify.html}{http://detexify.kirelabs.org/classify.html}
 \fbox{\href{\wlnewdoc{Ex5-Math/Ex5-Math-solution.tex}}{%
 click here to see my solution}}.
 \end{itemize}
 
+\end{frame}
+
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
+\begin{frame}{Packages}
+Packages allow you to further customize \LaTeX
+\begin{block}{The command:}
+\cmdbs{usepackage\{amsmath\}}
+\end{block}
+
+\begin{block}{Common packages}
+\begin{tabularx}{0.95\textwidth}{lX}
+\toprule
+Environment & Packages \\ \midrule
+Maths & amsmath, amsfonts, amssymb \\ 
+Maths Times Font & {mathptx} \\
+Figures & graphicx, epsfig \\
+Table & tabularx, booktabs \\
+Pagelayout & geometry \\
+Hyperlinks & hyperref \\
+Algorithms and code & algpseudocode, algorithm, listings \\
+Color & color, xcolor \\
+\bottomrule
+\end{tabularx}
+\end{block}
+\end{frame}
+
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
+\begin{frame}{Ex 5b: Maths}
+
+\begin{itemize}
+\item Align equations as shown below:
+
+\begin{align}
+	y   & =  ax+b \nonumber\\
+	y+1 & = ax+(b+1)\\
+	    & = ax+(b+2)-1
+\end{align}
+
+
+\begin{align}
+\label{eq:yequation}
+\begin{aligned}
+	y   & =  ax+b \\
+	y+1 & = ax+(b+1)\\
+	    & = ax+(b+2)-1
+\end{aligned}
+\end{align}
+
+
+\begin{center}
+\fbox{\href{\wlnewdoc{Ex5-Math/Ex5-Math.tex}}{%
+Click to open this exercise in \wllogo{}}}
+\end{center}
+\item Insert cross references use \cmdbs{usepackage\{cleveref\}}.
+\item Use \cmmd{align} environment. To use this environment you need include 
+\cmdbs{usepackage\{amsmath\}} and \cmdbs{usepackage\{amsfonts\}} packages.
+\end{itemize}
+\begin{center}
+\fbox{\href{\wlnewdoc{Ex5-Math/Ex5-Math-solution.tex}}{%
+click here to see my solution}}
+\end{center}
 \end{frame}
 
 \end{document}

@@ -380,11 +380,12 @@ span + .entry-title {
 	border-radius: $border-radius;
   ul {
   	list-style-type: none;
-  	padding-left: 0;
+  	padding-left: 2em;
+	border-bottom: 1px solid #ddd;
   }
   li {
     @include font-size(16,no,18);
-    border-bottom: 1px solid $border-color;
+ //   border-bottom: 1px solid $border-color;
     list-style-type: none;
   }
   h6 {

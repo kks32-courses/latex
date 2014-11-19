@@ -10,13 +10,13 @@ modified: 2014-11-09T15:14:14
 
 # Online LaTeX editors
 
-## writeLaTex: 
+## writeLaTeX
 
-	<https://writelatex.com>
+<https://writelatex.com>
 
-## ShareLaTeX:
+## ShareLaTeX
 
-	<https://www.sharelatex.com/>
+<https://www.sharelatex.com/>
 
 # Windows OS
 

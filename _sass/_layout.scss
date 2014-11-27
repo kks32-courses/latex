@@ -372,37 +372,44 @@ span + .entry-title {
 // Table of Contents
 // table of contents
 #markdown-toc {
-	font-family: $alt-font;
-	margin-top: $gutter;
-	margin-bottom: $gutter;
-	padding-left: 0;
-	border: 1px solid $border-color;
-	border-radius: $border-radius;
-  ul {
+    font-family: $alt-font;
+    margin-top: $gutter;
+    margin-bottom: $gutter;
+    padding-left: 0;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    background-color: #FFFAF0;
+    @media only screen and (min-width: 768px) {
+        #got{
+            position: fixed;
+            left: 0cm;
+        }
+    }
+    ul {
   	list-style-type: none;
   	padding-left: 2em;
 	border-bottom: 1px solid #ddd;
-  }
-  li {
-    @include font-size(16,no,18);
- //   border-bottom: 1px solid $border-color;
-    list-style-type: none;
-  }
-  h6 {
-    margin: 0;
-    padding: (.25 * $gutter) (.5 * $gutter);
-    background: $table-stripe-color;
-  }
-  a {
-    display: block;
-    padding: (.25 * $gutter) (.5 * $gutter);
-    border-left: 2px solid transparent;
-    border-bottom: 0 solid transparent;
-    &:hover,
-    &:focus {
-      background: lighten($border-color,5);
     }
-  }
+    li {
+        @include font-size(16,no,18);
+        //   border-bottom: 1px solid $border-color;
+        list-style-type: none;
+    }
+    h6 {
+        margin: 0;
+        padding: (.25 * $gutter) (.5 * $gutter);
+        background: $table-stripe-color;
+    }
+    a {
+        display: block;
+        padding: (.25 * $gutter) (.5 * $gutter);
+        border-left: 2px solid transparent;
+        border-bottom: 0 solid transparent;
+        &:hover,
+        &:focus {
+            background: lighten($border-color,5);
+        }
+    }
 }
 
 
@@ -483,8 +490,11 @@ span + .entry-title {
 	@extend .btn;
 }
 .ribbon img{
-        position: fixed; 
-        top: 0;
-        right: 0; 
-        border: 0;
+    position: fixed; 
+    top: 0;
+    right: 0; 
+    border: 0;
+    @media only screen and (max-width: 480px) {
+            display: none;
+    }
 }

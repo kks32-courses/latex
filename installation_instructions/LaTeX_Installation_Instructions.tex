@@ -64,9 +64,9 @@ vmarginratio=1:1]{geometry}
 \subsubsection*{\TeX Live (Recommended)}
 \begin{enumerate}
 \item	Download the \TeX Live ISO ($\sim 2.5$~GB) from 
-\url{http://anorien.csc.warwick.ac.uk/mirrors/CTAN/systems/texlive/Images/texlive2014.iso}
+\url{http://anorien.csc.warwick.ac.uk/mirrors/CTAN/systems/texlive/Images/texlive2015.iso}
 \item	Download WinCDEmu (if you don't have a virtual drive) from 
-\url{http://wincdemu.sysprogs.org/download/WinCDEmu-3.6.exe}
+\url{http://wincdemu.sysprogs.org/download/}
 \item	To install Windows CD Emulator follow the instructions at 
 \url{http://wincdemu.sysprogs.org/tutorials/install/}
 \item	Right click the iso and mount it using the WinCDEmu as shown in 
@@ -88,13 +88,13 @@ Maintenance (Admin) and choose Package Manager
 
 \subsection*{TexStudio (\TeX Editor)}
 \begin{enumerate}
-\item	Download TexStudio 2.8 from 
+\item	Download TexStudio 2.10 from 
 \url{http://texstudio.sourceforge.net/\#downloads} 
 \item	Run the installer
 \end{enumerate}
 
 \section*{Mac OS X}
-\subsection*{MacTex (Install \TeX Live 2014)}
+\subsection*{MacTex (Install \TeX Live 2015)}
 \begin{enumerate}
 \item	
 	Download the file from 
@@ -107,7 +107,7 @@ Maintenance (Admin) and choose Package Manager
 \subsection*{TexStudio (\TeX Editor)}
 \begin{enumerate}
 \item	
-	Download \TeX Studio 2.8 from 
+	Download \TeX Studio 2.10 from 
 	\url{http://texstudio.sourceforge.net/\#downloads}
  
 \item
@@ -156,7 +156,7 @@ sudo apt-get install psutils
 \item	
 	Mount the ISO file in the mnt directory
 	\begin{lstlisting}[style=shell]
-	mount -t iso9660 -o ro,loop,noauto /your/texlive2014.iso /mnt
+	mount -t iso9660 -o ro,loop,noauto /your/texlive2015.iso /mnt
 	\end{lstlisting}
 
 \item
@@ -183,17 +183,17 @@ cd /your/download/directory
 \paragraph{64Bit}
 
 \begin{verbatim}
-PATH=/usr/local/texlive/2014/bin/x86_64-linux:$PATH; export PATH
-MANPATH=/usr/local/texlive/2014/texmf/doc/man:$MANPATH; export MANPATH 
-INFOPATH=/usr/local/texlive/2014/texmf/doc/info:$INFOPATH; export INFOPATH
+PATH=/usr/local/texlive/2015/bin/x86_64-linux:$PATH; export PATH
+MANPATH=/usr/local/texlive/2015/texmf/doc/man:$MANPATH; export MANPATH 
+INFOPATH=/usr/local/texlive/2015/texmf/doc/info:$INFOPATH; export INFOPATH
 \end{verbatim}
 
 \paragraph{32Bit}
 
 \begin{verbatim}
-PATH=/usr/local/texlive/2014/bin/i386-linux:$PATH; export PATH 
-MANPATH=/usr/local/texlive/2014/texmf/doc/man:$MANPATH; export MANPATH 
-INFOPATH=/usr/local/texlive/2014/texmf/doc/info:$INFOPATH; export INFOPATH
+PATH=/usr/local/texlive/2015/bin/i386-linux:$PATH; export PATH 
+MANPATH=/usr/local/texlive/2015/texmf/doc/man:$MANPATH; export MANPATH 
+INFOPATH=/usr/local/texlive/2015/texmf/doc/info:$INFOPATH; export INFOPATH
 \end{verbatim}
 
 \end{enumerate}

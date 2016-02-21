@@ -1,0 +1,114 @@
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathptmx}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{cleveref}
+\usepackage{color}
+\usepackage{minted}
+\usepackage{hyperref}
+\usepackage{multicol}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{menukeys}
+
+% Stolen from John Miller's LaTeX course
+\newcommand{\bftt}[1]{\textbf{\texttt{#1}}}
+\newcommand{\comment}[1]{{\color[HTML]{008080}\textit{\textbf{\texttt{#1}}}}}
+\newcommand{\cmmd}[1]{{\color[HTML]{008000}\bftt{#1}}}
+\newcommand{\bs}{$\backslash$}
+\newcommand{\cmdbs}[1]{\cmmd{\bs#1}}
+\newcommand{\lb}{{\char'173}}% Left brackets -> {
+\newcommand{\rb}{{\char'175}}% Right brackets -> }
+\newcommand{\cmdbegin}[1]{\cmdbs{begin\lb}\bftt{#1}\cmmd{\rb}}
+\newcommand{\cmdend}[1]{\cmdbs{end\lb}\bftt{#1}\cmmd{\rb}}
+
+
+
+%\newcommand{\wllogo}{\textbf{write\textrm{\LaTeX}}}
+
+% this is where the example source files are loaded from
+% do not include a trailing slash
+\newcommand{\wllogo}{\textbf{Overleaf}}
+\newcommand{\fileuri}{https://raw.githubusercontent.com/kks32/latex-course/exercises/}
+\newcommand{\wlserver}{https://www.overleaf.com}
+\newcommand{\wlnewdoc}[1]{\wlserver/docs?snip\_uri=\fileuri#1\&splash=none}
+\newcommand{\wlnewdocarray}[1]{\wlserver/docs?snip\_uri[]=\fileuri#1}
+\newcommand{\wlmorearray}[1]{&snip\_uri[]=\fileuri#1}
+
+\def\tikzname{Ti\emph{k}Z}
+
+
+% stolen from minted.dtx
+\newenvironment{exampletwoup}
+  {\VerbatimEnvironment
+   \begin{VerbatimOut}{example.out}}
+  {\end{VerbatimOut}
+   \setlength{\parindent}{0pt}
+   \fbox{\begin{tabular}{l| l}
+   \begin{minipage}{0.55\linewidth}
+     \inputminted[fontsize=\small,resetmargins]{latex}{example.out}
+   \end{minipage} &
+   \begin{minipage}{0.35\linewidth}
+     \input{example.out}
+   \end{minipage}
+   \end{tabular}}}
+
+\newenvironment{exampletwouptiny}
+  {\VerbatimEnvironment
+   \begin{VerbatimOut}{example.out}}
+  {\end{VerbatimOut}
+   \setlength{\parindent}{0pt}
+   \fbox{\begin{tabular}{l|l}
+   \begin{minipage}{0.55\linewidth}
+     \inputminted[fontsize=\scriptsize,resetmargins]{latex}{example.out}
+   \end{minipage} &
+   \begin{minipage}{0.35\linewidth}
+     \setlength{\parskip}{6pt plus 1pt minus 1pt}%
+     \raggedright\scriptsize\input{example.out}
+   \end{minipage}
+   \end{tabular}}}
+
+% ******************************** Meta-data ***********************************
+\mode<presentation>
+{
+  \usetheme{Madrid}
+  \setbeamercovered{transparent}
+}
+
+
+\usepackage{caption}
+\captionsetup{font=scriptsize, labelfont=scriptsize, justification=centering}
+
+\title{Writing papers and thesis using \LaTeX2e}
+
+\author {Krishna Kumar \inst{*}\thanks{kks32@cam.ac.uk} }
+
+\institute[ University of Cambridge ] % (optional, but mostly needed)
+{
+  \inst{1}%
+  King's College\\
+  University of Cambridge
+}
+
+\date[LaTeX course 2014] % (optional, should be abbreviation of conference name)
+{\LaTeX for Beginners}
+
+\pgfdeclareimage[height=0.2cm]{university-logo}{figs/cambridge.png}
+
+
+% Delete this, if you do not want the table of contents to pop up at
+% the beginning of each subsection:
+%\AtBeginSubsection[]
+%{
+%  \begin{frame}<beamer>{Outline}
+%    \tableofcontents[currentsection,currentsubsection]
+%  \end{frame}
+%}
+
+
+% If you wish to uncover everything in a step-wise fashion, uncomment
+% the following command: 
+
+% \beamerdefaultoverlayspecification{<+->}

@@ -21,8 +21,10 @@ Course has hands-on exercises to help you write and format your papers and thesi
 *    Formatting a paper using a journal's template (IEEE / others depending on the participants).
 *    Formatting your thesis using the CUED PhD Thesis Template
 
+Interactive exercises are available through [OverLeaf](https://www.overleaf.com/).
+
 ## Acknowledgements
-The course uses some materials from:
+The course uses materials from:
 *    Dr. John Miller's LaTeX course: [http://github.com/jdleesmiller/latex-course](http://github.com/jdleesmiller/latex-course)
 *    Wikibooks LaTeX: [https://en.wikibooks.org/wiki/LaTeX](https://en.wikibooks.org/wiki/LaTeX)
 *    Andy Robert's LaTeX blog: [http://www.andy-roberts.net/writing/latex/](http://www.andy-roberts.net/writing/latex/)

@@ -1,0 +1,370 @@
+\documentclass[10pt,times]{beamer}
+\input{preamble.tex}
+\subtitle{Part II: Writing papers and thesis using \LaTeX}
+%***************************** Title page **************************************
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+%*******************************************************************************
+%**************************** Introduction *************************************
+%*******************************************************************************
+\section{Graphics}
+
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
+\begin{frame}[fragile]{Figures}
+\begin{itemize}
+\item \LaTeX can be easily extended using a \emph{package} to typeset images.
+
+\item To use graphics in your \LaTeX document use \cmdbs{usepackage\{graphicx\}}
+
+\item Always use relative scaling to specify the width of the figure, i.e., 
+
+\cmmd{[width = 0.75\bs textwidth]}
+
+\item Never ever use absolute values to scale your images!
+
+\item Set either the width or the height of the image. Or use \cmmd{scale}
+
+\end{itemize}
+\begin{exampletwoup}
+\begin{figure}
+\includegraphics[width=0.75\textwidth]
+                           {figs/minion}
+\end{figure}
+\end{exampletwoup}
+\end{frame}
+
+
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
+\begin{frame}[fragile]{Figures}
+\begin{itemize}
+\item For captioning a figure, you can use \cmdbs{usepackage\{caption\}}
+
+\item tweak the location, label, separator: \cmmd{[labelsep=space, 
+tableposition=top]\{caption\}}
+
+\item I prefer to centre the figure. To do that use \cmdbs{centering}
+
+\item You can use \cmmd{\~\bs cref\{fig:minion\}} to cross reference the 
+figure. Requires package \cmmd{cleveref}
+
+\end{itemize}
+\begin{exampletwoup}
+\begin{figure}
+\centering
+\includegraphics[width=0.75\textwidth]
+                           {figs/minion}
+\caption[Minion]{
+	Dave the Minion from Despicable Me!}
+\label{fig:minion} % Unique identifier 
+                   % for cross-reference
+\end{figure}
+\end{exampletwoup}
+\end{frame}
+
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
+\begin{frame}[fragile]{\bs begin[option]\{figure\}}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\textwidth}{l X}
+\toprule
+\textbf{Parameter} &	\textbf{Position} \\ \midrule
+h &	Place the float here, i.e., approximately at the same point it occurs in 
+the source text (however, not exactly at the spot) \\
+t &	Position at the top of the page. \\
+b &	Position at the bottom of the page. \\
+p &	Put on a special page for floats only. \\
+! &	Override internal parameters LaTeX uses for determining "good" float 
+positions. \\
+H &	Places the float at precisely the location in the LaTeX code. Requires the 
+float package. This is somewhat equivalent to h! \\ \bottomrule
+\end{tabularx}
+\end{frame}
+
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
+\begin{frame}[fragile]{Subcaption}
+
+I can cite Wall-E (see~\cref{fig:WallE}) and Minions in despicable me 
+(\cref{fig:Minnion}).~\Cref{fig:animations} lets me cite the whole figure.
+
+\begin{exampletwouptiny}
+\begin{figure}
+  \centering
+  \begin{subfigure}[b]{0.3\textwidth}
+    \includegraphics[width=\textwidth]
+			    {figs/TomandJerry}
+    \caption{Tom and Jerry}
+    \label{fig:TomJerry}   
+  \end{subfigure}             
+  \begin{subfigure}[b]{0.3\textwidth}
+    \includegraphics[width=\textwidth]{figs/WallE}
+    \caption{Wall-E}
+    \label{fig:WallE}
+  \end{subfigure}             
+  \begin{subfigure}[b]{0.3\textwidth}
+    \includegraphics[width=\textwidth]{figs/minion}
+    \caption{Minions}
+    \label{fig:Minnion}
+  \end{subfigure}
+  \caption{Best Animations}
+  \label{fig:animations}
+\end{figure}
+\end{exampletwouptiny}
+\end{frame}
+
+
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
+\begin{frame}[fragile]{Exercise 6: Pictures}
+
+\begin{center}
+\fbox{\href{\wlnewdocarray{Ex6-Pictures/Ex6-Pictures.tex\wlmorearray{Ex6-Pictures/figs/minion.png}\wlmorearray{Ex6-Pictures/figs/Kings.png}\wlmorearray{Ex6-Pictures/figs/TomandJerry.png}\wlmorearray{Ex6-Pictures/figs/WallE.png}}}
+{%
+Click to open this exercise in \wllogo{}}}
+\end{center}
+
+\begin{itemize}
+\item In write\LaTeX create a new folder \cmmd{figs} and move your figures in to \cmmd{figs} folder.
+\item Format the King's college picture. Change it's location: (top, 
+bottom, here, new page) and rescale the figure.
+\item Arrange Tom, WallE and Dave inside a single figure environment 
+vertically.
+\item Cross-reference the figures (using \cmmd{cleveref}).
+\item Create a list of figures. Use \cmdbs{listoffigures}.
+\end{itemize}
+
+\begin{center}
+%
+\fbox{\href{\wlnewdoc{Ex6-Pictures/Ex6-Pictures-solution.tex}}{%
+Click to open my solution}}
+\end{center}
+
+\end{frame}
+
+
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
+\subsection{Tables}
+\begin{frame}[fragile]{Tables}
+\begin{itemize}
+\item Tables in \LaTeX{} take some getting used to.
+\item The argument specifies column alignment --- \textbf{l}eft, 
+\textbf{c}enter, \textbf{r}ight.
+\begin{exampletwouptiny}
+\begin{tabular}{lcr}
+Item   & Qty & Unit \$ \\
+Widget & 1   & 199.99  \\
+Gadget & 2   & 399.99  \\
+Cable  & 3   & 19.99   \\
+\end{tabular}
+\end{exampletwouptiny}
+\item Don't use vertical lines, it's ugly. Use \cmdbegin{booktabs} to create 
+horizontal lines. Never use \cmdbs{hline}
+\begin{exampletwouptiny}
+\begin{table}[h]
+\caption{Cost}
+\begin{tabular}{lrr} \toprule
+Item   & Qty & Unit \$ \\ \midrule
+Widget & 1   & 199.99  \\
+Gadget & 2   & 399.99  \\
+Cable  & 3   & 19.99   \\ \bottomrule
+\end{tabular}
+\label{t:cost}
+\end{table}
+\end{exampletwouptiny}
+\item Use an ampersand \keys{\&} to separate columns and a double 
+backslash \keys{\bs}\keys{\bs} to start a new row (like in 
+the \bftt{align*} environment that we saw in part 1).
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Table Environment}
+
+\begin{table}
+\begin{tabularx}{0.9\textwidth}{l X} \toprule
+\textbf{Option} & \textbf{Description} \\ \midrule
+l  &	left-justified column \\
+c  &	centered column  \\
+r  &	right-justified column  \\
+p\{`width'\} &	paragraph column with text vertically aligned at the top  \\
+m\{`width'\} & 	paragraph column with text vertically aligned in the middle \\
+b\{`width'\} &	paragraph column with text vertically aligned at the bottom  \\
+\cmdbs{\&} & 	column separator \\
+\cmmd{\bs \bs} &	start new row (additional space may be specified \\
+\cmdbs{cmidrule\{i-j\}} & 	partial horizontal line beginning in column i and 
+ending in column j \\ \bottomrule
+\end{tabularx}
+\end{table}
+\end{frame}
+
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
+\begin{frame}[fragile]{Exercise 7: Tables}
+
+\begin{center}
+\fbox{\href{\wlnewdoc{Ex7-Tables/Ex7-Tables.tex}}{%
+Click to open this exercise in \wllogo{}}}
+\end{center}
+
+\begin{itemize}
+\item Use \cmmd{tabularx} package for tables with paragraph text.
+
+\item Never use \cmdbs{hline} or \cmdbs{cline}, use \cmdbs{toprule}, 
+\cmdbs{midrule}, \cmdbs{bottomrule} and \cmdbs{cmidrule\{i-j\}}
+
+\item Visual table editor: 
+\href{http://truben.no/table/}{http://truben.no/table/}
+\end{itemize}
+
+\begin{center}
+%
+\fbox{\href{\wlnewdoc{Ex7-Tables/Ex7-Tables-solution.tex}}{%
+Click to open my solution}}.
+\end{center}
+
+\end{frame}
+
+
+
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
+\subsection{bib\TeX}
+\begin{frame}[fragile]{\insertsubsection{} 1}
+\begin{itemize}
+\item Put your references in a \bftt{.bib} file in `bibtex' database format:
+\inputminted[fontsize=\scriptsize,frame=single]{latex}{bib-example.bib}
+\item Most reference managers can export to bibtex format.
+\end{itemize}
+\end{frame}
+
+
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
+\begin{frame}[fragile]{\insertsubsection{} 2}
+\begin{itemize}
+\item Each entry in the \bftt{.bib} file has a \emph{key} that you can use to
+reference it in the document. For example, \bftt{Jacobson1999Towards} is the 
+key for this article:
+\begin{minted}[fontsize=\small,frame=single]{latex}
+@Article{Jacobson1999Towards,
+  author = {Van Jacobson},
+  ...
+}
+\end{minted}
+\item It's a good idea to use a key based on the name, year and title.
+\item \LaTeX{} can automatically format your in-text citations and generate a
+list of references; it knows most standard styles, and you can design your own.
+\end{itemize}
+\end{frame}
+
+
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
+\begin{frame}[fragile]{\insertsubsection{} 3}
+\begin{itemize}
+\item Use the \bftt{natbib} package\footnote{There is a new package with more
+  features named \bftt{biblatex} but most of the articles templates still use
+  \bftt{natbib}.} with \cmdbs{citet}and \cmdbs{citep} for textual and 
+  parenthetical citations, respectively.
+\item Reference \cmdbs{bibliography} at the end, and specify a 
+\cmdbs{bibliographystyle}.
+\end{itemize}
+\begin{minipage}{0.55\linewidth}
+\inputminted[fontsize=\scriptsize,frame=single,resetmargins]{latex}%
+  {bib-example.tex}
+\end{minipage}
+\begin{minipage}{0.35\linewidth}
+\includegraphics[width=\textwidth,clip,trim=1.8in 5in 1.8in 
+1in]{bib-example.pdf}
+\end{minipage}
+\end{frame}
+
+
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
+\begin{frame}[fragile]{Exercise 8: Formatting a Paper}
+
+\begin{center}
+\fbox{\href{\wlnewdoc{Ex8-Paper/Ex8-Paper.tex}}{%
+Click to open this exercise in \wllogo{}}}
+\end{center}
+
+\begin{center}
+\fbox{\href{\fileuri Ex8-Paper/paper.bib}{%
+Upload this file to \wllogo{}}}
+\end{center}
+
+\begin{center}
+\fbox{\href{\fileuri Ex8-Paper/figure.pdf}{%
+Upload this file to \wllogo{}}}
+\end{center}
+\begin{itemize}
+
+\item Reference styles: 
+\href{http://sites.stat.psu.edu/~surajit/present/bib.htm}{http://sites.stat.psu.edu/~surajit/present/bib.htm}
+
+\item Bibliography style previews: 
+\href{http://nodonn.tipido.net/bibstyle.php}{http://nodonn.tipido.net/bibstyle.php}
+\end{itemize}
+
+\begin{center}
+%
+\fbox{\href{\wlnewdoc{Ex8-Paper/Ex8-Paper-solution.tex}}{%
+Click to open my solution}}.
+\end{center}
+
+\end{frame}
+
+
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
+\begin{frame}{PhD Thesis Template}
+
+\begin{center}
+\fbox{\href{https://github.com/kks32/phd-thesis-template/blob/master/README.md}{%
+Detailed instructions on how to use the template}}
+
+\vspace*{1em}
+
+Write your PhD Thesis online
+
+\vspace*{1em}
+
+\fbox{\href{https://www.writelatex.com/templates/phd-thesis-template-for-cambridge-university-engineering-department-cued/kgfqybfnqkdf}{%
+Click to open the template in \wllogo{}}}
+
+\vspace*{1em}
+
+\fbox{\href{https://www.sharelatex.com/templates/thesis/cambridge-university-engineering-department-(28cued)-latex-phd-thesis-template}{%
+Click to open the template in share\LaTeX}}
+
+\vspace*{1em}
+
+or use it off-line 
+
+\vspace*{1em}
+
+\fbox{\href{http://github.com/kks32/phd-thesis-template/}{%
+View the template in github}}
+\end{center}
+
+\end{frame}
+
+
+\end{document}

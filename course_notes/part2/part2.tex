@@ -14,6 +14,39 @@
 %*******************************************************************************
 %******************************* Frame *****************************************
 %*******************************************************************************
+\subsection{Raster v Vector graphics}
+\begin{frame}{Vector graphics vs. Raster images}
+\begin{figure}
+\includegraphics[width=\textwidth]{figs/vector_vs_raster.jpg}
+\end{figure}
+\begin{itemize}
+\item Use \cmmd{inkscape} to generate vector graphics
+\end{itemize}
+\end{frame}
+
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
+\subsection{Better quality figures}
+\begin{frame}{Colour blindness}
+\begin{figure}
+\includegraphics[height=0.6\textheight]{figs/colourblindness_rainbow.png}
+\end{figure}
+\begin{itemize}
+\item Making graphs with colour-blind viewers in mind - Charlotte Houldcroft
+\href{https://kks32.github.io/latex/articles/colour-blindness/}
+{https://kks32.github.io/latex/articles/colour-blindness/}
+
+\item Use \cmmd{GNUPlot} to generate vector graphics of your plots. Make sure 
+the plots have different line styles so it works well on a black and white 
+print.
+\end{itemize}
+\end{frame}
+
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
+\subsection{Including figures}
 \begin{frame}[fragile]{Figures}
 \begin{itemize}
 \item \LaTeX can be easily extended using a \emph{package} to typeset images.
@@ -154,7 +187,7 @@ Click to open my solution}}
 %*******************************************************************************
 %******************************* Frame *****************************************
 %*******************************************************************************
-\subsection{Tables}
+\section{Tables}
 \begin{frame}[fragile]{Tables}
 \begin{itemize}
 \item Tables in \LaTeX{} take some getting used to.
@@ -188,6 +221,10 @@ the \bftt{align*} environment that we saw in part 1).
 \end{itemize}
 \end{frame}
 
+
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
 \begin{frame}{Table Environment}
 
 \begin{table}
@@ -235,12 +272,125 @@ Click to open my solution}}.
 
 \end{frame}
 
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
+\subsection{Formatting tricks}
+
+\begin{frame}[fragile]{A badly formatted table}
+\begin{exampletwouptinyfifty}
+\begin{tabular}{|l|c|c|c|c|}
+\hline 
+& \multicolumn{2}{c}{Species I} &
+	 \multicolumn{2}{c|}{Species II} \\ 
+\hline
+DM  & mean & SD  & mean & SD  \\ 
+\hline 
+\hline
+I1MD & 6.23 & 0.91 & 5.2  & 0.7  \\
+\hline 
+I1LL & 7.48 & 0.56 & 8.7  & 0.71 \\
+\hline 
+I2MD & 3.99 & 0.63 & 4.22 & 0.54 \\
+\hline 
+I2LL & 6.81 & 0.02 & 6.66 & 0.01 \\
+\hline 
+CMD & 13.47 & 0.09 & 10.55 & 0.05 \\
+\hline 
+CBL & 11.88 & 0.05 & 13.11 & 0.04\\ 
+\hline 
+\end{tabular}
+\end{exampletwouptinyfifty}
+\end{frame}
+
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
+\begin{frame}[fragile]{A nice looking table}
+\begin{exampletwouptinyfifty}
+\begin{tabular}{l c c c c}
+\hline 
+\multirow{2}{*}{DM}
+ & \multicolumn{2}{c}{Species I}
+ & \multicolumn{2}{c}{Species II} \\ 
+\cline{2-5}
+  & mean & SD  & mean & SD  \\ 
+\hline
+I1MD & 6.23 & 0.91 & 5.2  & 0.7  \\
+
+I1LL & 7.48 & 0.56 & 8.7  & 0.71 \\
+
+I2MD & 3.99 & 0.63 & 4.22 & 0.54 \\
+
+I2LL & 6.81 & 0.02 & 6.66 & 0.01 \\
+
+CMD & 13.47 & 0.09 & 10.55 & 0.05 \\
+
+CBL & 11.88 & 0.05 & 13.11 & 0.04\\ 
+\hline 
+\end{tabular}
+\end{exampletwouptinyfifty}
+\end{frame}
+
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
+\begin{frame}[fragile]{An even nicer looking table}
+\begin{exampletwouptinyfifty}
+\begin{tabular}{l c c c c}
+\toprule
+\multirow{2}{*}{DM} 
+	& \multicolumn{2}{c}{Species I} 
+	& \multicolumn{2}{c}{Species II} \\ 
+\cmidrule{2-5}
+  & mean & SD  & mean & SD  \\ 
+\midrule
+I1MD & 6.23 & 0.91 & 5.2  & 0.7  \\
+
+I1LL & 7.48 & 0.56 & 8.7  & 0.71 \\
+
+I2MD & 3.99 & 0.63 & 4.22 & 0.54 \\
+
+I2LL & 6.81 & 0.02 & 6.66 & 0.01 \\
+
+CMD & 13.47 & 0.09 & 10.55 & 0.05 \\
+
+CBL & 11.88 & 0.05 & 13.11 & 0.04\\ 
+\bottomrule
+\end{tabular}
+\end{exampletwouptinyfifty}
+\end{frame}
 
 
 %*******************************************************************************
 %******************************* Frame *****************************************
 %*******************************************************************************
-\subsection{bib\TeX}
+\begin{frame}[fragile]{Formatting tables}
+\begin{itemize}
+\item Use \cmmd{tabulary} package for tables with paragraph text.
+
+\item Never use vertical lines in your table. It looks ugly!
+
+\item Use \cmmd{booktabs} package for rules instead of lines.
+
+\item Never use \cmdbs{hline} or \cmdbs{cline}, use \cmdbs{toprule}, 
+\cmdbs{midrule}, \cmdbs{bottomrule} and \cmdbs{cmidrule\{i-j\}}.
+
+\item Use \cmdbs{centering} to center your tables, do 
+\textbf{NOT} use \cmdbegin{center} and \cmdend{center} as it adds additional 
+white space
+
+\item Visual table editor: 
+\href{http://truben.no/table/}{http://truben.no/table/}
+\end{itemize}
+\end{frame}
+
+
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
+\section{Referencing using bib\TeX}
+\subsection{Bib\TeX}
 \begin{frame}[fragile]{\insertsubsection{} 1}
 \begin{itemize}
 \item Put your references in a \bftt{.bib} file in `bibtex' database format:
@@ -334,8 +484,8 @@ Click to open my solution}}.
 %*******************************************************************************
 %******************************* Frame *****************************************
 %*******************************************************************************
+\section{PhD Thesis Template}
 \begin{frame}{PhD Thesis Template}
-
 \begin{center}
 \fbox{\href{https://github.com/kks32/phd-thesis-template/blob/master/README.md}{%
 Detailed instructions on how to use the template}}

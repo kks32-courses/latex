@@ -6,6 +6,78 @@
 \begin{frame}
   \titlepage
 \end{frame}
+
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
+\section{World outside the WYSIWYG bubble}
+
+\begin{frame}{Why you shouldn't use Word to write your thesis}
+  \centering
+  \includegraphics[height=0.8\textheight]{figs/word_crash.pdf}
+\end{frame}
+
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
+\begin{frame}{Can you see beyond the WYSIWYG bubble?}
+  \begin{figure}
+    \centering
+    \includegraphics[height=0.8\textheight]{figs/LaTeX_Word.pdf}
+    \caption*{Word vs. \LaTeX}
+\end{figure}
+\end{frame}
+
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
+\begin{frame}{Can you see beyond the WYSIWYG bubble?}
+  \begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{figs/LaTeX_InDesign_Word.png}
+    \caption*{Word vs. InDesign vs. \LaTeX}
+\end{figure}
+\end{frame}
+
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
+\begin{frame}{Ligatures}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth]{figs/ligatures_word.png}
+\caption{MS Word}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth]{figs/ligatures_latex.png}
+\caption{\LaTeX}
+\end{figure}
+\flushright
+D.Taraborelli (2008), The Beauty of \LaTeX
+\end{frame}
+
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
+\begin{frame}{Ligatures, smallcaps, kerning}
+\begin{figure}
+  \centering
+  \includegraphics[width=0.7\textwidth]{figs/ligatures.png}
+  \caption*{Ligatures}
+\end{figure}
+\begin{figure}
+  \centering
+  \includegraphics[width=0.4\textwidth]{figs/smallcaps.png}
+  \caption*{Smallcaps}
+\end{figure}
+\begin{figure}
+  \centering
+  \includegraphics[width=0.4\textwidth]{figs/kerning.png}
+  \caption*{Kerning}
+\end{figure}
+\end{frame}
+
 %*******************************************************************************
 %**************************** Introduction *************************************
 %*******************************************************************************
@@ -14,6 +86,7 @@
 %*******************************************************************************
 %******************************* Frame *****************************************
 %*******************************************************************************
+\section{What is \LaTeX}
 \begin{frame}{What is \LaTeX?}
 \begin{itemize}
 \item \LaTeX is a document preparation system for the \TeX typesetting 
@@ -39,33 +112,6 @@ E^2 = (pc)^2 + (m_0 c^2)^2
 %*******************************************************************************
 %******************************* Frame *****************************************
 %*******************************************************************************
-\begin{frame}{Can you see beyond the WYSIWYG bubble?}
-\begin{figure}
-\includegraphics[height=0.85\textheight]{figs/LaTeX_Word.png}
-\end{figure}
-\end{frame}
-
-%*******************************************************************************
-%******************************* Frame *****************************************
-%*******************************************************************************
-\begin{frame}{Ligatures}
-\begin{figure}
-\centering
-\includegraphics[width=0.7\textwidth]{figs/ligatures_word.png}
-\caption{MS Word}
-\end{figure}
-\begin{figure}
-\centering
-\includegraphics[width=0.7\textwidth]{figs/ligatures_latex.png}
-\caption{\LaTeX}
-\end{figure}
-\flushright
-D.Taraborelli (2008), The Beauty of \LaTeX
-\end{frame}
-
-%*******************************************************************************
-%******************************* Frame *****************************************
-%*******************************************************************************
 \begin{frame}
 \frametitle{History}
 It all started with Donald Knuth and ``The Art of Computer Programming'' 
@@ -86,6 +132,32 @@ accessing the power of \TeX}
 %*******************************************************************************
 %******************************* Frame *****************************************
 %*******************************************************************************
+\begin{frame}{Getting started with \LaTeX}
+\begin{itemize}
+\item \textbf{Typesetting}
+\begin{itemize}
+\item \TeX Live - full version
+\item MiK\TeX - Windows (Basic installer)
+\end{itemize}
+\item \textbf{Off-line editors}
+\begin{itemize}
+\item \TeX Studio
+\item \TeX MakerX
+\end{itemize}
+\item \textbf{Online editors \& \LaTeX compilers}
+\begin{itemize}
+\item Overleaf (formerly Write\LaTeX)
+\item Share\LaTeX
+\end{itemize}
+
+\end{itemize}
+
+\end{frame}
+
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
+\subsection{How \LaTeX works}
 \begin{frame}{How \LaTeX works? - The Magic}
 \begin{itemize}
 \item You write your document in \texttt{plain text} with \cmd{commands} that
@@ -101,7 +173,7 @@ beautifully formatted document.
 %*******************************************************************************
 %******************************* Frame *****************************************
 %*******************************************************************************
-
+\subsection{\LaTeX  Pros and Cons}
 \begin{frame}{\LaTeX Pros and Cons}
 \textbf{Pros}
 \begin{itemize}
@@ -167,6 +239,51 @@ will ignore the rest of the line.
 %*******************************************************************************
 %******************************* Frame *****************************************
 %*******************************************************************************
+\begin{frame}{Declarations and Environments}
+\begin{block}{Declaration and commands\ldots}
+\begin{itemize}
+\item Are stated once
+\item Take effect until further notice
+\item Can optionally be constrained
+\end{itemize}
+Eg., \cmdbs{documentclass} or \cmdbs{includegraphics}
+\end{block}
+
+\begin{block}{Environments\ldots}
+\begin{itemize}
+\item Have matching begin and end declarations
+\item Must be constrained
+\end{itemize}
+Eg., \cmdbegin{document} \ldots \cmdend{document}
+\end{block}
+\end{frame}
+
+
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
+\begin{frame}{Arguments}
+\begin{block}{Required arguments\ldots}
+\begin{itemize}
+\item Are contained in curly braces
+\item Must be provided
+\end{itemize}
+Eg., \cmdbs{documentclass\{article\}}
+\end{block}
+
+\begin{block}{Optional arguments\ldots}
+\begin{itemize}
+\item Are contained in square bracket
+\item Can be left out, in which case default value is assumed
+\item Give you more control over the commands
+\end{itemize}
+Eg., \cmdbs{documentclass\lbrack12pt\rbrack\{article\}}
+\end{block}
+\end{frame}
+
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
 \begin{frame}{Let's try that \dots}
 \begin{itemize}
 \item write\LaTeX{} is a website for writing documents in \LaTeX.
@@ -188,11 +305,7 @@ or a recent \href{http://www.mozilla.org/en-US/firefox/new/}{FireFox}.
 %*******************************************************************************
 %******************************* Frame *****************************************
 %*******************************************************************************
-\section{Structure}
-
-%*******************************************************************************
-%******************************* Frame *****************************************
-%*******************************************************************************
+\subsection{Structure}
 \begin{frame}{LaTeX Structure - The Magic}
 \begin{figure}
 \centering
@@ -200,6 +313,15 @@ or a recent \href{http://www.mozilla.org/en-US/firefox/new/}{FireFox}.
 \end{figure}
 \end{frame}
 
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
+\begin{frame}{LaTeX - Tool chains}
+\begin{figure}
+\centering
+\includegraphics[width=0.85\textwidth]{figs/Latex-file-flow.png}
+\end{figure}
+\end{frame}
 
 %*******************************************************************************
 %******************************* Frame *****************************************
@@ -226,6 +348,33 @@ beamer& For writing presentations \\ \bottomrule
 %*******************************************************************************
 %******************************* Frame *****************************************
 %*******************************************************************************
+\begin{frame}{Packages}
+Packages allow you to further customize \LaTeX
+\begin{block}{The command:}
+\cmdbs{usepackage\{amsmath\}}
+\end{block}
+
+\begin{block}{Common packages}
+\begin{tabularx}{0.95\textwidth}{lX}
+\toprule
+Environment & Packages \\ \midrule
+Maths & amsmath, amsfonts, amssymb \\ 
+Maths Times Font & {mathptx} \\
+Figures & graphicx, epsfig \\
+Table & tabularx, booktabs \\
+Pagelayout & geometry \\
+Hyperlinks & hyperref \\
+Algorithms and code & algpseudocode, algorithm, listings \\
+Color & color, xcolor \\
+\bottomrule
+\end{tabularx}
+\end{block}
+\end{frame}
+
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
+\section{Typesetting}
 \begin{frame}[fragile]{Typesetting Caveats}
 \small
 \begin{itemize}
@@ -281,84 +430,12 @@ click here to see my solution}}.
 \end{itemize}
 \end{frame}
 
-%*******************************************************************************
-%******************************* Frame *****************************************
-%*******************************************************************************
-\begin{frame}{Declarations and Environments}
-\begin{block}{Declaration and commands\ldots}
-\begin{itemize}
-\item Are stated once
-\item Take effect until further notice
-\item Can optionally be constrained
-\end{itemize}
-Eg., \cmdbs{documentclass} or \cmdbs{includegraphics}
-\end{block}
-
-\begin{block}{Environments\ldots}
-\begin{itemize}
-\item Have matching begin and end declarations
-\item Must be constrained
-\end{itemize}
-Eg., \cmdbegin{document} \ldots \cmdend{document}
-\end{block}
-\end{frame}
-
 
 %*******************************************************************************
 %******************************* Frame *****************************************
 %*******************************************************************************
-\begin{frame}{Arguments}
-\begin{block}{Required arguments\ldots}
-\begin{itemize}
-\item Are contained in curly braces
-\item Must be provided
-\end{itemize}
-Eg., \cmdbs{documentclass\{article\}}
-\end{block}
-
-\begin{block}{Optional arguments\ldots}
-\begin{itemize}
-\item Are contained in square bracket
-\item Can be left out, in which case default value is assumed
-\item Give you more control over the commands
-\end{itemize}
-Eg., \cmdbs{documentclass\lbrack12pt\rbrack\{article\}}
-\end{block}
-\end{frame}
-
-
-%*******************************************************************************
-%******************************* Frame *****************************************
-%*******************************************************************************
-\begin{frame}{Packages}
-Packages allow you to further customize \LaTeX
-\begin{block}{The command:}
-\cmdbs{usepackage\{amsmath\}}
-\end{block}
-
-\begin{block}{Common packages}
-\begin{tabularx}{0.95\textwidth}{lX}
-\toprule
-Environment & Packages \\ \midrule
-Maths & amsmath, amsfonts, amssymb \\ 
-Maths Times Font & {mathptx} \\
-Figures & graphicx, epsfig \\
-Table & tabularx, booktabs \\
-Pagelayout & geometry \\
-Hyperlinks & hyperref \\
-Algorithms and code & algpseudocode, algorithm, listings \\
-Color & color, xcolor \\
-\bottomrule
-\end{tabularx}
-\end{block}
-\end{frame}
-
-
-%*******************************************************************************
-%******************************* Frame *****************************************
-%*******************************************************************************
-
-\begin{frame}{Handling Errors}
+\section{Error handling}
+\begin{frame}{Handling errors}
 \begin{itemize}
 \item \LaTeX{} can get confused when it is trying to compile your document. If
 it does, it stops with an error, which you must fix before it will produce

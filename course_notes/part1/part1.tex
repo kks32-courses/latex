@@ -44,6 +44,7 @@
 %*******************************************************************************
 %******************************* Frame *****************************************
 %*******************************************************************************
+\subsection{Title and abstract}
 \begin{frame}{Title and Abstract}
 Before you begin typing your document, i.e., \cmdbs{begin\{document\}} you need 
 to define the author name and title.
@@ -170,6 +171,7 @@ click here to see my solution}}.
 %*******************************************************************************
 %******************************* Frame *****************************************
 %*******************************************************************************
+\section{Maths}
 \begin{frame}[fragile]{Typesetting Maths}
 \begin{itemize}
 \item Why are dollar signs \keys{\$} special? We use them to mark mathematics 
@@ -229,7 +231,7 @@ $\Omega = \sum_{k=1}^{n} \omega_k$
 %*******************************************************************************
 %******************************* Frame *****************************************
 %*******************************************************************************
-\begin{frame}[fragile]{\insertsubsection{}: Displayed Equations}
+\begin{frame}[fragile]{Inline equations}
 \begin{itemize}
 \item If it's big and scary, \emph{display} it on its own line using
 \cmdbegin{equation} and \cmdend{equation}.\\[2ex]
@@ -317,6 +319,39 @@ Click to open this exercise in \wllogo{}}}
 \fbox{\href{\wlnewdoc{Ex5-Math/Ex5-Math-solution.tex}}{%
 click here to see my solution}}
 \end{center}
+\end{frame}
+
+
+%*******************************************************************************
+%******************************* Frame *****************************************
+%*******************************************************************************
+\begin{frame}[fragile]{Never use equation arrays}
+\begin{itemize}
+\item Use \cmmd{align} instead of \cmmd{eqnarray} when you have multiple 
+equations.
+\end{itemize}
+\begin{exampletwoup}
+\begin{eqnarray}
+E& = & m_0 c^2 \,,\\
+E^2& = &(m_0 c^2)^2 + (pc)^2 \,.
+\end{eqnarray}
+\end{exampletwoup}
+\vskip 2ex
+\begin{exampletwoup}
+\begin{equation}
+E = m_0 c^2 \,,
+\end{equation}
+\begin{equation}
+E^2 = (m_0 c^2)^2 + (pc)^2 \,.
+\end{equation}
+\end{exampletwoup}
+\vskip 2ex
+\begin{exampletwoup}
+\begin{align}
+E  =  m_0 c^2 \,,\\
+E^2  = (m_0 c^2)^2 + (pc)^2 \,.
+\end{align}
+\end{exampletwoup}
 \end{frame}
 
 \end{document}

@@ -1,4 +1,33 @@
-\documentclass[10pt,times]{beamer}
+%**************************************************************************************
+% License:
+% CC BY-NC-SA 4.0 (http://creativecommons.org/licenses/by-nc-sa/4.0/)
+%**************************************************************************************
+
+\documentclass[notes]{beamer}
+
+\mode<presentation> {
+	
+	\usetheme{Madrid}
+	
+	% Burnt orange
+	\definecolor{burntorange}{rgb}{0.8, 0.33, 0.0}
+	\colorlet{beamer@blendedblue}{burntorange}
+	% Pale yellow
+	\definecolor{paleyellow}{rgb}{1.0, 1.0, 0.953}
+	\setbeamercolor{background canvas}{bg=paleyellow}
+	% Secondary and tertiary palett
+	\setbeamercolor*{palette secondary}{use=structure,fg=white,bg=burntorange!80!black}
+	\setbeamercolor*{palette tertiary}{use=structure,fg=white,bg=burntorange!60!black}
+	
+	% To remove the footer line in all slides uncomment this line
+	%\setbeamertemplate{footline}
+	% To replace the footer line in all slides with a simple slide count uncomment this line
+	%\setbeamertemplate{footline}[page number]
+	
+	% To remove the navigation symbols from the bottom of all slides uncomment this line
+	%\setbeamertemplate{navigation symbols}{}
+}
+
 \input{preamble.tex}
 \subtitle{Part 0: Introduction to \LaTeX}
 %***************************** Title page **************************************
@@ -146,8 +175,7 @@ accessing the power of \TeX}
 \end{itemize}
 \item \textbf{Online editors \& \LaTeX compilers}
 \begin{itemize}
-\item Overleaf (formerly Write\LaTeX)
-\item Share\LaTeX
+\item Overleaf
 \end{itemize}
 
 \end{itemize}
@@ -484,11 +512,11 @@ click here to see my solution}}.
 This \LaTeX for Beginners course is loosely based on and examples from:
 \begin{itemize}
 \item John Miller's An interactive introduction to \LaTeX: 
-\href{https://www.writelatex.com/blog/7}{https://www.writelatex.com/blog/7}
+\href{https://www.overleaf.com/blog/7}{https://www.overleaf.com/blog/7}
 \item WikiBook on \LaTeX: 
 \href{https://en.wikibooks.org/wiki/LaTeX}{https://en.wikibooks.org/wiki/LaTeX}
-\item Share\LaTeX Learn: 
-\href{https://www.sharelatex.com/learn}{https://www.sharelatex.com/learn}
+\item Overleaf Learn: 
+\href{https://www.overleaf.com/learn}{https://www.overleaf.com/learn}
 \item CUED Textprocessing: \href{http://www.eng.cam.ac.uk/help/tpl/textprocessing/}{http://www.eng.cam.ac.uk/help/tpl/textprocessing/}
 \item UCS Course on \LaTeXe: \href{http://www.ucs.cam.ac.uk/docs/course-notes/unix-courses/earlier/latex}{http://www.ucs.cam.ac.uk/docs/course-notes/unix-courses/earlier/latex}
 \end{itemize}

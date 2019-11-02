@@ -1,18 +1,17 @@
 \documentclass{article}
-\usepackage[authoryear]{natbib}
+\usepackage[style=authoryear-ibid]{biblatex}
+%Import the bibliography file
+\addbibresource{references.bib}
+
 \begin{document}
 
-\citet{Brooks1997Methodology}
+\textcite{Brooks1997Methodology}
 show that \ldots. Clearly,
 all odd numbers are prime
-\citep{Jacobson1999Towards}.
+\autocite{Jacobson1999Towards}.
 
-\bibliography{bib-example} 
-% if `bib-example' is the name of
-% your bib file
 
-\bibliographystyle{plainnat}
-% try changing to abbrvnat
+\printbibliography
 
 \end{document}
 

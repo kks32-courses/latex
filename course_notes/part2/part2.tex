@@ -387,12 +387,12 @@ white space
 %*******************************************************************************
 %******************************* Frame *****************************************
 %*******************************************************************************
-\section{Referencing using bib\TeX}
-\subsection{Bib\TeX}
+\section{Referencing using bib\LaTeX}
+\subsection{Bib\LaTeX}
 \begin{frame}[fragile]{\insertsubsection{} 1}
 \begin{itemize}
-\item Put your references in a \bftt{.bib} file in `bibtex' database format:
-\inputminted[fontsize=\scriptsize,frame=single]{latex}{bib-example.bib}
+\item Put your references in a \bftt{.bib} file in `biblatex' database format:
+\inputminted[fontsize=\scriptsize,frame=single]{latex}{references.bib}
 \item Most reference managers can export to bibtex format.
 \end{itemize}
 \end{frame}
@@ -424,11 +424,9 @@ list of references; it knows most standard styles, and you can design your own.
 %*******************************************************************************
 \begin{frame}[fragile]{\insertsubsection{} 3}
 \begin{itemize}
-\item Use the \bftt{natbib} package\footnote{There is a new package with more
-  features named \bftt{biblatex} but most of the articles templates still use
-  \bftt{natbib}.} with \cmdbs{citet}and \cmdbs{citep} for textual and 
-  parenthetical citations, respectively.
-\item Reference \cmdbs{bibliography} at the end, and specify a 
+\item Use the \texttt{biblatex} package with \cmdbs{textcite}and \cmdbs{autocite}
+  for textual and parenthetical citations, respectively.
+\item Add references using \cmdbs{printbibliography} at the end, and specify a 
 \cmdbs{bibliographystyle}.
 \end{itemize}
 \begin{minipage}{0.55\linewidth}

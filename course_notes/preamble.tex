@@ -2,11 +2,14 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{mathptmx}
-
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{cleveref}
 \usepackage{color}
 \usepackage{minted}
 \usepackage{hyperref}
 \usepackage{multicol}
+\usepackage{multirow}
 \usepackage{tabularx}
 \usepackage{booktabs}
 \usepackage{menukeys}
@@ -24,12 +27,16 @@
 
 
 
+%\newcommand{\wllogo}{\textbf{write\textrm{\LaTeX}}}
+
 % this is where the example source files are loaded from
 % do not include a trailing slash
 \newcommand{\wllogo}{\textbf{Overleaf}}
-\newcommand{\fileuri}{https://raw.githubusercontent.com/kks32/latex-course/master/exercises/}
+\newcommand{\fileuri}{https://raw.githubusercontent.com/kks32-courses/latex/master/exercises/}
 \newcommand{\wlserver}{https://www.overleaf.com}
 \newcommand{\wlnewdoc}[1]{\wlserver/docs?snip\_uri=\fileuri#1\&splash=none}
+\newcommand{\wlnewdocarray}[1]{\wlserver/docs?snip\_uri[]=\fileuri#1}
+\newcommand{\wlmorearray}[1]{&snip\_uri[]=\fileuri#1}
 
 \def\tikzname{Ti\emph{k}Z}
 
@@ -64,32 +71,63 @@
    \end{minipage}
    \end{tabular}}}
 
-% ******************************** Meta-data ***********************************
-\mode<presentation>
-{
-  \usetheme{Madrid}
-  \setbeamercovered{transparent}
-}
 
+\newenvironment{exampletwouptinyfifty}
+  {\VerbatimEnvironment
+   \begin{VerbatimOut}{example.out}}
+  {\end{VerbatimOut}
+   \setlength{\parindent}{0pt}
+   \fbox{\begin{tabular}{l|l}
+   \begin{minipage}{0.45\textwidth}
+     \inputminted[fontsize=\scriptsize,resetmargins]{latex}{example.out}
+   \end{minipage} &
+   \begin{minipage}{0.45\textwidth}
+     \setlength{\parskip}{6pt plus 1pt minus 1pt}%
+     \raggedright\scriptsize\input{example.out}
+   \end{minipage}
+   \end{tabular}}}
+
+% ******************************** Meta-data ***********************************
+\mode<presentation> {
+	
+	\usetheme{Madrid}
+	
+	% Burnt orange
+	\definecolor{burntorange}{rgb}{0.8, 0.33, 0.0}
+	\colorlet{beamer@blendedblue}{burntorange}
+	% Pale yellow
+	\definecolor{paleyellow}{rgb}{1.0, 1.0, 0.953}
+	\setbeamercolor{background canvas}{bg=paleyellow}
+	% Secondary and tertiary palett
+	\setbeamercolor*{palette secondary}{use=structure,fg=white,bg=burntorange!80!black}
+	\setbeamercolor*{palette tertiary}{use=structure,fg=white,bg=burntorange!60!black}
+	
+	% To remove the footer line in all slides uncomment this line
+	%\setbeamertemplate{footline}
+	% To replace the footer line in all slides with a simple slide count uncomment this line
+	%\setbeamertemplate{footline}[page number]
+	
+	% To remove the navigation symbols from the bottom of all slides uncomment this line
+	%\setbeamertemplate{navigation symbols}{}
+}
 
 \usepackage{caption}
 \captionsetup{font=scriptsize, labelfont=scriptsize, justification=centering}
 
 \title{Writing papers and thesis using \LaTeX2e}
 
-\author {Krishna Kumar \inst{*}\thanks{kks32@cam.ac.uk} }
+\author {Krishna Kumar \inst{*}\thanks{krishnak@utexas.edu} }
 
-\institute[ University of Cambridge ] % (optional, but mostly needed)
+\institute[UT Austin] % (optional, but mostly needed)
 {
   \inst{1}%
-  King's College\\
-  University of Cambridge
+  Cockrell School of Engineering\\
+  The University of Texas at Austin
 }
 
-\date[LaTeX course 2014] % (optional, should be abbreviation of conference name)
-{\LaTeX for Beginners}
+\pgfdeclareimage[height=0.2cm]{university-logo}{figs/ut.png}
 
-
+\date[LaTeX Course]{\LaTeX for Beginners}
 % Delete this, if you do not want the table of contents to pop up at
 % the beginning of each subsection:
 \AtBeginSection[]
@@ -98,7 +136,6 @@
     \tableofcontents[currentsection,currentsubsection]
   \end{frame}
 }
-
 
 % If you wish to uncover everything in a step-wise fashion, uncomment
 % the following command: 

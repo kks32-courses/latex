@@ -4,7 +4,7 @@ Writing your Papers and Thesis using LaTeX
 
 ## Authors
 Krishna Kumar,
-University of Cambridge.
+University of Texas at Austin.
 
 ----------------------------------------------------------------------------------
 ## Course content

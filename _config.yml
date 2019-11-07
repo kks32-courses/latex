@@ -5,7 +5,7 @@ locale: en_GB
 description: Introduction to LaTeX for beginners
 #logo: site-logo.png
 search: true
-url: https://kks32.github.io/latex
+url: https://kks32-courses.github.io/latex
 #url: 
 
 
@@ -40,7 +40,7 @@ owner:
 #  twitter: #username
 #  facebook: #username
   github: kks32
-  github_project: https://github.com/kks32/latex-paper-thesis
+  github_project: https://github.com/kks32-courses/latex
 #  stackexchange: #http://stackoverflow.com/users/123456/username
 #  linkedin: #username
 #  instagram: #username
